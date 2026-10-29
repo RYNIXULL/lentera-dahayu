@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #090D14;
+  --color-brand-surface: #111824;
+  --color-brand-raised: #172232;
+  --color-brand-text: #F3F6FA;
+  --color-brand-muted: #A5B0C0;
+  --color-brand-line: #2A3545;
+  --color-brand-accent: #8BE5FF;
+  --color-brand-accent-strong: #43BFEA;
+  --color-brand-focus: #C1F1FF;
+  --color-brand-error: #FF7777;
+  --color-brand-success: #86D6AD;
+  
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #090D14;
+  --foreground: #F3F6FA;
+}
+
+body {
+  background-color: #090D14;
+  color: #F3F6FA;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(139, 229, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* Glassmorphism Frosted Glass Utilities */
+.glass-nav {
+  background-color: rgba(9, 13, 20, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glass-card {
+  background-color: rgba(17, 24, 36, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(42, 53, 69, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background-color: rgba(23, 34, 50, 0.75);
+  border-color: rgba(139, 229, 255, 0.35);
+  box-shadow: 0 8px 30px -4px rgba(139, 229, 255, 0.08);
+}
+
+.glass-modal {
+  background-color: rgba(17, 24, 36, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.glass-badge {
+  background-color: rgba(139, 229, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 229, 255, 0.2);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
