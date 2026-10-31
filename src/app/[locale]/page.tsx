@@ -6,9 +6,9 @@ import { getFeaturedProducts } from "@/lib/products";
 import { constructMetadata } from "@/lib/metadata";
 import { HeroSection } from "@/components/sections/hero-section";
 import { FeaturedProducts } from "@/components/sections/featured-products";
-import { CapabilitiesSection } from "@/components/sections/capabilities-section";
+import { HomeServicesSection } from "@/components/sections/home-services-section";
 import { ApproachSection } from "@/components/sections/approach-section";
-import { ContactSection } from "@/components/sections/contact-section";
+import { HomeContactSection } from "@/components/sections/home-contact-section";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -45,14 +45,14 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       <HeroSection locale={locale} dict={dict} />
+      <HomeServicesSection dict={dict} />
       <FeaturedProducts
         products={featuredProducts}
         locale={locale}
         dict={dict}
       />
-      <CapabilitiesSection locale={locale} dict={dict} />
       <ApproachSection dict={dict} />
-      <ContactSection dict={dict} />
+      <HomeContactSection dict={dict} />
     </>
   );
 }

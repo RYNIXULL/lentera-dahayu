@@ -40,14 +40,53 @@ export const messagesEn: Dictionary = {
     contact: "Contact",
   },
   hero: {
-    badge: "Software Engineering Studio",
-    headline: "Ideas, engineered into systems.",
+    badge: "Website & App Development Services",
+    headline: "Websites and apps to bring your digital needs to life.",
     subheadline: "LENTERA DAHAYU — software engineering & digital solutions.",
     description:
-      "Architecting resilient, performant, and purposeful software. We translate complex operational problems into reliable digital instruments for businesses and users alike.",
-    ctaCatalog: "Explore Products",
+      "LENTERA DAHAYU offers website development as well as Android, iOS, Windows, and macOS app development. Tell us what you need and let's discuss the right solution.",
+    ctaCatalog: "View Services",
     ctaContact: "Discuss a Project",
     interactiveNotice: "Interactive 3D experience — move cursor or touch to interact",
+  },
+  home: {
+    services: {
+      eyebrow: "Services",
+      title: "What We Can Build",
+      description:
+        "Three types of software development services for your digital needs.",
+      note: "Scope, features, and technical details are discussed together based on your project needs.",
+      items: [
+        {
+          title: "Website Development",
+          description:
+            "Websites designed around your needs and goals.",
+          platforms: ["Web"],
+        },
+        {
+          title: "Mobile App Development",
+          description:
+            "Apps for mobile devices, built around your requirements.",
+          platforms: ["Android", "iOS"],
+        },
+        {
+          title: "Desktop App Development",
+          description:
+            "Apps for computers, built around your requirements.",
+          platforms: ["Windows", "macOS"],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "Start a Conversation",
+      title: "Tell Us About Your Project",
+      description:
+        "Get in touch with LENTERA DAHAYU to discuss the website or app you need.",
+      primaryTitle: "Main Contact",
+      socialTitle: "Social Media",
+      comingSoon: "Coming soon",
+      note: "Official communication channels will be activated once the details are available.",
+    },
   },
   featured: {
     eyebrow: "Curated Work",

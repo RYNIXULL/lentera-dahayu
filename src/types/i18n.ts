@@ -51,6 +51,28 @@ export interface Dictionary {
     badge: string;
     interactiveNotice: string;
   };
+  home: {
+    services: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      note: string;
+      items: Array<{
+        title: string;
+        description: string;
+        platforms: string[];
+      }>;
+    };
+    contact: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      primaryTitle: string;
+      socialTitle: string;
+      comingSoon: string;
+      note: string;
+    };
+  };
   featured: {
     eyebrow: string;
     title: string;

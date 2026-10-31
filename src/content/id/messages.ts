@@ -40,14 +40,53 @@ export const messagesId: Dictionary = {
     contact: "Kontak",
   },
   hero: {
-    badge: "Studio Rekayasa Perangkat Lunak",
-    headline: "Ide yang dirancang menjadi sistem.",
+    badge: "Jasa Pengembangan Website & Aplikasi",
+    headline: "Website dan aplikasi untuk mewujudkan kebutuhan digital Anda.",
     subheadline: "LENTERA DAHAYU — software engineering & digital solutions.",
     description:
-      "Membangun arsitektur perangkat lunak yang tangguh, terukur, dan bermakna. Kami mengubah kompleksitas teknis menjadi solusi digital yang presisi untuk kebutuhan bisnis dan pengguna.",
-    ctaCatalog: "Jelajahi Produk",
+      "LENTERA DAHAYU menyediakan jasa pembuatan website serta aplikasi Android, iOS, Windows, dan macOS. Ceritakan kebutuhan Anda untuk mendiskusikan solusi yang sesuai.",
+    ctaCatalog: "Lihat Layanan",
     ctaContact: "Diskusikan Proyek",
     interactiveNotice: "Pengalaman 3D interaktif — arahkan kursor atau sentuh untuk berinteraksi",
+  },
+  home: {
+    services: {
+      eyebrow: "Layanan",
+      title: "Apa yang Bisa Kami Bangun",
+      description:
+        "Tiga jenis layanan pengembangan software untuk kebutuhan digital Anda.",
+      note: "Lingkup, fitur, dan detail teknis dibahas bersama sesuai kebutuhan proyek.",
+      items: [
+        {
+          title: "Pembuatan Website",
+          description:
+            "Pengembangan website yang dirancang sesuai kebutuhan dan tujuan Anda.",
+          platforms: ["Web"],
+        },
+        {
+          title: "Pembuatan Aplikasi Mobile",
+          description:
+            "Pengembangan aplikasi untuk perangkat mobile sesuai kebutuhan Anda.",
+          platforms: ["Android", "iOS"],
+        },
+        {
+          title: "Pembuatan Aplikasi Desktop",
+          description:
+            "Pengembangan aplikasi untuk komputer sesuai kebutuhan Anda.",
+          platforms: ["Windows", "macOS"],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "Mulai Diskusi",
+      title: "Ceritakan Kebutuhan Proyek Anda",
+      description:
+        "Hubungi LENTERA DAHAYU untuk mendiskusikan website atau aplikasi yang Anda butuhkan.",
+      primaryTitle: "Kontak Utama",
+      socialTitle: "Media Sosial",
+      comingSoon: "Segera tersedia",
+      note: "Kanal komunikasi resmi akan diaktifkan setelah informasinya tersedia.",
+    },
   },
   featured: {
     eyebrow: "Karya Terkurasi",

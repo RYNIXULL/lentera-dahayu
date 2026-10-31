@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${geistSans.variable} ${geistMono.variable} h-full dark`}>
-      <body className="min-h-full flex flex-col bg-[#090D14] text-[#F3F6FA] antialiased">
+      <body className="min-h-full flex flex-col  bg-[#090D14] text-[#F3F6FA] antialiased">
         <ToastProvider>{children}</ToastProvider>
       </body>
     </html>

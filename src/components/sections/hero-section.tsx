@@ -9,7 +9,7 @@ interface HeroSectionProps {
   dict: Dictionary;
 }
 
-export function HeroSection({ locale, dict }: HeroSectionProps) {
+export function HeroSection({ dict }: HeroSectionProps) {
   return (
     <section
       aria-labelledby="hero-heading"
@@ -34,7 +34,7 @@ export function HeroSection({ locale, dict }: HeroSectionProps) {
             {/* Editorial Headline */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#F3F6FA] leading-[1.08]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F3F6FA] leading-[1.08]"
             >
               {dict.hero.headline}
             </h1>
@@ -49,19 +49,15 @@ export function HeroSection({ locale, dict }: HeroSectionProps) {
               <Button
                 variant="primary"
                 size="lg"
-                href={`/${locale}/products`}
+                href="#kontak"
                 className="shadow-[0_0_25px_rgba(139,229,255,0.2)]"
               >
-                <span>{dict.hero.ctaCatalog}</span>
+                <span>{dict.hero.ctaContact}</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
 
-              <Button
-                variant="secondary"
-                size="lg"
-                href={`/${locale}/contact`}
-              >
-                <span>{dict.hero.ctaContact}</span>
+              <Button variant="secondary" size="lg" href="#layanan">
+                <span>{dict.hero.ctaCatalog}</span>
               </Button>
             </div>
 
@@ -81,6 +77,7 @@ export function HeroSection({ locale, dict }: HeroSectionProps) {
           {/* 3D Light Engine Column */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             <div className="w-full max-w-[500px] aspect-square relative">
+
               <HeroSceneLoader />
               {/* Interactive caption notice */}
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[11px] font-mono text-[#A5B0C0]/60 whitespace-nowrap pointer-events-none hidden sm:block">
