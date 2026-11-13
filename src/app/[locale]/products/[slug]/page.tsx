@@ -43,7 +43,7 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | LENTERA DAHAYU",
+      title: "Product Not Found | R21F_webdev",
     };
   }
 

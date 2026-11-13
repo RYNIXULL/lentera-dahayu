@@ -60,23 +60,23 @@ export function SectionVariants() {
     >
       <div className="max-w-2xl z-10 space-y-8">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-[#8BE5FF] glass-badge mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold text-[#0284C7] clay-badge mb-4">
             <Layers className="w-3.5 h-3.5" />
             <span>DEPLOYMENT TIERS // 12. VARIANTS & SPEC MATRIX</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F3F6FA] leading-[1.05]">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#1E293B] leading-[1.05]">
             Choose your stack.{" "}
-            <span className="text-[#8BE5FF]">Watch the 3D model multiply.</span>
+            <span className="text-[#0284C7]">Watch the 3D model multiply.</span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-[#64748B] leading-relaxed">
             Clicking between tiers physically spawns interlocking ceramic units in the real-time 3D canvas behind this panel.
           </p>
         </div>
 
         {/* Tier Tabs */}
-        <div className="grid grid-cols-3 gap-2.5 p-1.5 rounded-2xl bg-[#090D14]/80 border border-[#2A3545]">
+        <div className="grid grid-cols-3 gap-2.5 p-2 rounded-3xl bg-white border border-[#E2E8F0] shadow-[0_4px_12px_rgba(0,0,0,0.03)]">
           {tiers.map((t) => {
             const active = activeVariant === t.id;
             return (
@@ -85,10 +85,10 @@ export function SectionVariants() {
                 type="button"
                 onClick={() => setActiveVariant(t.id)}
                 data-cursor="pointer"
-                className={`py-3 px-2 sm:px-4 rounded-xl text-center font-mono transition-all ${
+                className={`py-3 px-2 sm:px-4 rounded-2xl text-center font-mono transition-all cursor-pointer ${
                   active
-                    ? "bg-[#8BE5FF] text-[#090D14] font-bold shadow-[0_0_20px_rgba(139,229,255,0.25)]"
-                    : "text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-[#172232]"
+                    ? "clay-btn-primary font-bold shadow-md"
+                    : "text-[#64748B] hover:text-[#1E293B] hover:bg-[#F0F9FF]"
                 }`}
               >
                 <span className="block text-xs uppercase">{t.name.replace("VESSEL-01 ", "")}</span>
@@ -102,23 +102,23 @@ export function SectionVariants() {
         {(() => {
           const current = tiers.find((t) => t.id === activeVariant) || tiers[0];
           return (
-            <div className="glass-card rounded-2xl p-6 sm:p-8 border border-[#2A3545] space-y-6 animate-slide-up">
-              <div className="flex items-center justify-between pb-4 border-b border-[#2A3545]">
+            <div className="clay-card rounded-3xl p-6 sm:p-8 border border-[#E2E8F0] space-y-6 animate-slide-up">
+              <div className="flex items-center justify-between pb-4 border-b border-[#E2E8F0]">
                 <div>
-                  <h3 className="text-xl font-bold text-[#F3F6FA]">{current.name}</h3>
-                  <p className="text-xs font-mono text-[#8BE5FF] mt-1">{current.stackDesc}</p>
+                  <h3 className="text-xl font-bold text-[#1E293B]">{current.name}</h3>
+                  <p className="text-xs font-mono font-bold text-[#0284C7] mt-1">{current.stackDesc}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-3xl font-mono font-black text-[#F3F6FA]">{current.price}</span>
-                  <span className="block text-[10px] font-mono text-[#A5B0C0]">ONE-TIME FABRICATION</span>
+                  <span className="text-3xl font-mono font-black text-[#1E293B]">{current.price}</span>
+                  <span className="block text-[10px] font-mono text-[#64748B] font-bold">ONE-TIME FABRICATION</span>
                 </div>
               </div>
 
               {/* Feature Checklist */}
               <ul className="space-y-3">
                 {current.features.map((feat, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-[#A5B0C0]">
-                    <div className="w-5 h-5 rounded-full bg-[#8BE5FF]/15 border border-[#8BE5FF]/30 text-[#8BE5FF] flex items-center justify-center shrink-0 mt-0.5">
+                  <li key={i} className="flex items-start gap-3 text-sm text-[#64748B]">
+                    <div className="w-5 h-5 rounded-full bg-[#F0F9FF] border border-[#BAE6FD] text-[#0284C7] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span>{feat}</span>
@@ -133,7 +133,7 @@ export function SectionVariants() {
                   const el = document.getElementById("sec-cta");
                   if (el) el.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="w-full py-3.5 rounded-xl bg-[#8BE5FF] text-[#090D14] font-mono font-bold text-sm hover:bg-[#43BFEA] transition-all flex items-center justify-center gap-2"
+                className="clay-btn-primary w-full py-4 text-sm font-mono font-bold flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>ALLOCATE {current.name.toUpperCase()}</span>
                 <ArrowRight className="w-4 h-4" />

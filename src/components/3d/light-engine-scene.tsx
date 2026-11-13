@@ -17,8 +17,8 @@ const REF_ROPE_LENGTH = 2.1;
 const ROPE_RADIUS = 0.0112;
 const DROP_DURATION = 1.3;
 const HOVER_SCALE = 1.05;
-const COLOR_CYAN = "#8BE5FF";
-const COLOR_AMBER = "#FF8A65";
+const COLOR_CYAN = "#0284C7";
+const COLOR_AMBER = "#38BDF8";
 
 function subscribeReducedMotion(callback: () => void) {
   if (typeof window === "undefined") return () => {};
@@ -223,7 +223,7 @@ function LightEngineObjects({ baseRef }: LightEngineObjectsProps) {
       <group ref={pivotRef}>
         <mesh ref={ropeRef}>
           <cylinderGeometry args={[ROPE_RADIUS, ROPE_RADIUS, 1, 16]} />
-          <meshStandardMaterial color="#2E3A4E" roughness={0.7} metalness={0.3} />
+          <meshStandardMaterial color="#D4C5B9" roughness={0.8} metalness={0.1} />
         </mesh>
 
         <group
@@ -241,24 +241,24 @@ function LightEngineObjects({ baseRef }: LightEngineObjectsProps) {
               ref={cageMatRef}
               color={COLOR_CYAN}
               emissive={COLOR_CYAN}
-              emissiveIntensity={0.15}
-              roughness={0.35}
-              metalness={0.8}
+              emissiveIntensity={0.25}
+              roughness={0.3}
+              metalness={0.4}
               wireframe
               transparent
-              opacity={0.6}
+              opacity={0.75}
             />
           </mesh>
 
-          {/* Glass body: faint so the bulb reads through it */}
+          {/* Glass body: faint warm clear */}
           <mesh>
             <cylinderGeometry args={[0.52, 0.45, 1.0, 32, 1, true]} />
             <meshStandardMaterial
-              color="#111824"
+              color="#FFFDF9"
               roughness={0.1}
-              metalness={0}
+              metalness={0.1}
               transparent
-              opacity={0.18}
+              opacity={0.2}
               side={THREE.DoubleSide}
               depthWrite={false}
             />
@@ -266,17 +266,17 @@ function LightEngineObjects({ baseRef }: LightEngineObjectsProps) {
 
           <mesh position={[0, 0.65, 0]}>
             <coneGeometry args={[0.42, 0.32, 32]} />
-            <meshStandardMaterial color="#1E2838" roughness={0.25} metalness={0.7} />
+            <meshStandardMaterial color="#FFFFFF" roughness={0.4} metalness={0.05} />
           </mesh>
 
           <mesh position={[0, 0.85, 0]} rotation={[Math.PI / 2, 0, 0]}>
             <torusGeometry args={[0.08, 0.025, 16, 32]} />
-            <meshStandardMaterial ref={ringMatRef} color={COLOR_CYAN} roughness={0.2} metalness={0.9} />
+            <meshStandardMaterial ref={ringMatRef} color={COLOR_CYAN} roughness={0.3} metalness={0.5} />
           </mesh>
 
           <mesh position={[0, -0.58, 0]}>
             <cylinderGeometry args={[0.41, 0.31, 0.18, 32]} />
-            <meshStandardMaterial color="#1A2333" roughness={0.3} metalness={0.6} />
+            <meshStandardMaterial color="#FFFFFF" roughness={0.4} metalness={0.05} />
           </mesh>
 
           <mesh>

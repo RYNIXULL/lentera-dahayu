@@ -11,9 +11,9 @@ const ThermalMaterialShader = {
   uniforms: {
     uTime: { value: 0 },
     uHeatIntensity: { value: 0 },
-    uHeatColor: { value: new THREE.Color("#FF5722") },
-    uBaseColor: { value: new THREE.Color("#182234") },
-    uAccentColor: { value: new THREE.Color("#8BE5FF") },
+    uHeatColor: { value: new THREE.Color("#0284C7") },
+    uBaseColor: { value: new THREE.Color("#FFFFFF") },
+    uAccentColor: { value: new THREE.Color("#38BDF8") },
   },
   vertexShader: `
     varying vec3 vNormal;
@@ -81,12 +81,12 @@ export function HeroObject() {
   const heatColor = useMemo(() => {
     switch (temperatureMode) {
       case "creative":
-        return "#FF3D00";
+        return "#0284C7";
       case "deterministic":
-        return "#8BE5FF";
+        return "#BAE6FD";
       case "balanced":
       default:
-        return "#FF9100";
+        return "#38BDF8";
     }
   }, [temperatureMode]);
 
@@ -276,53 +276,53 @@ export function HeroObject() {
       <group ref={innerCoreGroupRef} position={[0, 0, 0]}>
         <mesh>
           <cylinderGeometry args={[0.88, 0.74, 2.0, 36]} />
-          <meshStandardMaterial color="#8BE5FF" roughness={0.2} metalness={0.7} />
+          <meshStandardMaterial color="#0284C7" roughness={0.3} metalness={0.2} />
         </mesh>
         <mesh position={[0, 1.05, 0]}>
           <torusGeometry args={[0.92, 0.03, 16, 48]} />
-          <meshBasicMaterial color="#8BE5FF" />
+          <meshBasicMaterial color="#38BDF8" />
         </mesh>
       </group>
 
       {/* 3. Ergonomic Handle */}
       <mesh position={[1.05, 0.05, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
         <torusGeometry args={[0.62, 0.15, 24, 36, Math.PI * 1.15]} />
-        <meshStandardMaterial color="#1E2838" roughness={0.3} metalness={0.1} />
+        <meshStandardMaterial color="#FFFFFF" roughness={0.4} metalness={0.05} />
       </mesh>
 
       {/* 4. Base Disc Group (Underside Inspection) */}
       <group ref={baseDiscGroupRef} position={[0, -1.1, 0]}>
         <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
           <circleGeometry args={[0.84, 48]} />
-          <meshStandardMaterial color="#131B27" roughness={0.4} metalness={0.3} />
+          <meshStandardMaterial color="#F0F5FA" roughness={0.4} metalness={0.05} />
         </mesh>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>
           <ringGeometry args={[0.45, 0.48, 36]} />
-          <meshBasicMaterial color="#8BE5FF" />
+          <meshBasicMaterial color="#0284C7" />
         </mesh>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>
           <ringGeometry args={[0.65, 0.67, 36]} />
-          <meshBasicMaterial color="#43BFEA" />
+          <meshBasicMaterial color="#38BDF8" />
         </mesh>
       </group>
 
       {/* 5. Rim Chamfer */}
       <mesh position={[0, 1.1, 0]} rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[0.94, 0.06, 16, 48]} />
-        <meshStandardMaterial color="#2E3C52" roughness={0.2} metalness={0.3} />
+        <meshStandardMaterial color="#E2E8F0" roughness={0.3} metalness={0.1} />
       </mesh>
 
       {/* 6. Wireframe Blueprint Overlay */}
       <mesh ref={wireframeMeshRef} visible={false} scale={[1.06, 1.04, 1.06]}>
         <cylinderGeometry args={[1.02, 0.88, 2.25, 24, 8, true]} />
-        <meshBasicMaterial color="#8BE5FF" wireframe transparent opacity={0.7} />
+        <meshBasicMaterial color="#0284C7" wireframe transparent opacity={0.7} />
       </mesh>
 
       {/* Stack 2: Pro Tier */}
       <group ref={stackGroup2Ref} position={[0, -2.4, 0]} scale={[0.92, 0.92, 0.92]} visible={false}>
         <mesh castShadow receiveShadow>
           <cylinderGeometry args={[1.0, 0.85, 2.2, 48, 1, true]} />
-          <meshStandardMaterial color="#1A2333" roughness={0.3} metalness={0.2} side={THREE.DoubleSide} />
+          <meshStandardMaterial color="#FFFFFF" roughness={0.3} metalness={0.05} side={THREE.DoubleSide} />
         </mesh>
       </group>
 
@@ -330,7 +330,7 @@ export function HeroObject() {
       <group ref={stackGroup3Ref} position={[0, 2.3, 0]} scale={[0.88, 0.88, 0.88]} visible={false}>
         <mesh castShadow receiveShadow>
           <cylinderGeometry args={[1.0, 0.85, 2.2, 48, 1, true]} />
-          <meshStandardMaterial color="#1A2333" roughness={0.3} metalness={0.2} side={THREE.DoubleSide} />
+          <meshStandardMaterial color="#FFFFFF" roughness={0.3} metalness={0.05} side={THREE.DoubleSide} />
         </mesh>
       </group>
     </group>

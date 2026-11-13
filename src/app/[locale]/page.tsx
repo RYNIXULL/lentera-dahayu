@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { FeaturedProducts } from "@/components/sections/featured-products";
 import { HomeServicesSection } from "@/components/sections/home-services-section";
 import { ApproachSection } from "@/components/sections/approach-section";
+import { TeamSection } from "@/components/team/team-section";
 import { HomeContactSection } from "@/components/sections/home-contact-section";
 
 interface HomePageProps {
@@ -52,6 +53,7 @@ export default async function HomePage({ params }: HomePageProps) {
         dict={dict}
       />
       <ApproachSection dict={dict} />
+      <TeamSection dict={dict} />
       <HomeContactSection dict={dict} />
     </>
   );

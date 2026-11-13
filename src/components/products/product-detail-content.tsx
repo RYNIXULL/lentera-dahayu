@@ -34,7 +34,7 @@ export function ProductDetailContent({
       <div className="mb-8">
         <Link
           href={`/${locale}/products`}
-          className="inline-flex items-center gap-2 text-xs font-mono text-[#A5B0C0] hover:text-[#8BE5FF] transition-colors focus:outline-none focus:ring-1 focus:ring-[#8BE5FF] rounded-md px-2 py-1"
+          className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#64748B] hover:text-[#0284C7] transition-all focus:outline-none rounded-2xl px-4 py-2 bg-white border-2 border-white shadow-[0_4px_12px_rgba(14,165,233,0.08),inset_2px_2px_4px_#FFFFFF] hover:-translate-y-0.5"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>{dict.common.backToCatalog}</span>
@@ -42,10 +42,10 @@ export function ProductDetailContent({
       </div>
 
       {/* Main Header */}
-      <header className="mb-12 pb-8 border-b border-[#2A3545]">
+      <header className="mb-12 pb-8 border-b border-[#E2E8F0]">
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span className="text-xs font-mono uppercase tracking-wider text-[#A5B0C0] flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#172232] border border-[#2A3545]">
-            <Layers className="w-3.5 h-3.5 text-[#8BE5FF]" />
+          <span className="text-xs font-mono uppercase tracking-wider text-[#0284C7] flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border-2 border-white font-bold shadow-[0_4px_10px_-2px_rgba(14,165,233,0.1),inset_2px_2px_4px_#FFFFFF]">
+            <Layers className="w-3.5 h-3.5 text-[#0284C7]" />
             {product.category}
           </span>
           <StatusBadge
@@ -54,11 +54,11 @@ export function ProductDetailContent({
           />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#F3F6FA] leading-[1.15] mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1E293B] leading-[1.15] mb-6">
           {content.name}
         </h1>
 
-        <p className="text-lg sm:text-xl text-[#A5B0C0] leading-relaxed max-w-3xl">
+        <p className="text-lg sm:text-xl text-[#64748B] leading-relaxed max-w-3xl">
           {content.summary}
         </p>
 
@@ -105,12 +105,12 @@ export function ProductDetailContent({
         <div className="lg:col-span-2 space-y-10">
           {/* Problem & Context */}
           {content.problem && (
-            <section className="glass-card rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg font-bold text-[#F3F6FA] mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#8BE5FF]" />
+            <section className="clay-card rounded-[32px] p-6 sm:p-8 border-[2.5px] border-white">
+              <h2 className="text-lg font-bold text-[#1E293B] mb-3 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#0284C7]" />
                 {dict.productDetail.problem}
               </h2>
-              <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">
                 {content.problem}
               </p>
             </section>
@@ -118,12 +118,12 @@ export function ProductDetailContent({
 
           {/* Solution */}
           {content.solution && (
-            <section className="glass-card rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg font-bold text-[#F3F6FA] mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#43BFEA]" />
+            <section className="clay-card rounded-[32px] p-6 sm:p-8 border-[2.5px] border-white">
+              <h2 className="text-lg font-bold text-[#1E293B] mb-3 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#38BDF8]" />
                 {dict.productDetail.solution}
               </h2>
-              <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">
                 {content.solution}
               </p>
             </section>
@@ -131,17 +131,17 @@ export function ProductDetailContent({
 
           {/* Features */}
           {content.features && content.features.length > 0 && (
-            <section className="glass-card rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg font-bold text-[#F3F6FA] mb-4">
+            <section className="clay-card rounded-[32px] p-6 sm:p-8 border-[2.5px] border-white">
+              <h2 className="text-lg font-bold text-[#1E293B] mb-4">
                 {dict.productDetail.features}
               </h2>
               <ul className="space-y-3">
                 {content.features.map((feature, idx) => (
                   <li
                     key={idx}
-                    className="flex items-start gap-3 text-sm text-[#A5B0C0]"
+                    className="flex items-start gap-3 text-sm text-[#64748B]"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-[#8BE5FF] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -151,12 +151,12 @@ export function ProductDetailContent({
 
           {/* Scope & Role */}
           {content.roleAndScope && (
-            <section className="glass-card rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg font-bold text-[#F3F6FA] mb-3 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#86D6AD]" />
+            <section className="clay-card rounded-[32px] p-6 sm:p-8 border-[2.5px] border-white">
+              <h2 className="text-lg font-bold text-[#1E293B] mb-3 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#059669]" />
                 {dict.productDetail.roleScope}
               </h2>
-              <p className="text-sm text-[#A5B0C0] leading-relaxed">
+              <p className="text-sm text-[#64748B] leading-relaxed">
                 {content.roleAndScope}
               </p>
             </section>
@@ -167,16 +167,16 @@ export function ProductDetailContent({
         <aside className="space-y-6">
           {/* Platform */}
           {content.platform && content.platform.length > 0 && (
-            <div className="glass-card rounded-2xl p-6">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-3 flex items-center gap-1.5">
-                <Cpu className="w-3.5 h-3.5 text-[#8BE5FF]" />
+            <div className="clay-card rounded-[30px] p-6 border-[2.5px] border-white">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-[#64748B] mb-3 flex items-center gap-1.5 font-bold">
+                <Cpu className="w-3.5 h-3.5 text-[#0284C7]" />
                 {dict.productDetail.platform}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {content.platform.map((p) => (
                   <span
                     key={p}
-                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-[#172232] text-[#F3F6FA] border border-[#2A3545]"
+                    className="text-xs font-mono font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-br from-white to-[#F0F9FF] text-[#1E293B] border-2 border-white shadow-[0_2px_6px_rgba(14,165,233,0.08),inset_1px_1px_2px_#FFFFFF]"
                   >
                     {p}
                   </span>
@@ -187,16 +187,16 @@ export function ProductDetailContent({
 
           {/* Technologies */}
           {content.technologies && content.technologies.length > 0 && (
-            <div className="glass-card rounded-2xl p-6">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-3 flex items-center gap-1.5">
-                <Code2 className="w-3.5 h-3.5 text-[#8BE5FF]" />
+            <div className="clay-card rounded-[30px] p-6 border-[2.5px] border-white">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-[#64748B] mb-3 flex items-center gap-1.5 font-bold">
+                <Code2 className="w-3.5 h-3.5 text-[#0284C7]" />
                 {dict.productDetail.technologies}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {content.technologies.map((t) => (
                   <span
                     key={t}
-                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-[#172232] text-[#8BE5FF] border border-[#2A3545]"
+                    className="text-xs font-mono font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-br from-white to-[#F0F9FF] text-[#0284C7] border-2 border-white shadow-[0_2px_6px_rgba(14,165,233,0.08),inset_1px_1px_2px_#FFFFFF]"
                   >
                     {t}
                   </span>
@@ -206,11 +206,11 @@ export function ProductDetailContent({
           )}
 
           {/* Technical Consultation CTA Card */}
-          <div className="rounded-2xl p-6 bg-gradient-to-br from-[#172232] to-[#111824] border border-[#8BE5FF]/20">
-            <h3 className="text-base font-bold text-[#F3F6FA] mb-2">
+          <div className="clay-card rounded-[30px] p-6 bg-gradient-to-br from-white to-[#F0F9FF] border-[2.5px] border-white shadow-[0_16px_36px_-6px_rgba(14,165,233,0.14)]">
+            <h3 className="text-base font-bold text-[#1E293B] mb-2">
               {dict.productDetail.inquireSimilar}
             </h3>
-            <p className="text-xs text-[#A5B0C0] leading-relaxed mb-4">
+            <p className="text-xs text-[#64748B] leading-relaxed mb-4">
               Diskusikan implementasi arsitektur serupa yang disesuaikan dengan infrastruktur dan kebutuhan organisasi Anda.
             </p>
             <Button

@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #090D14;
-  --color-brand-surface: #111824;
-  --color-brand-raised: #172232;
-  --color-brand-text: #F3F6FA;
-  --color-brand-muted: #A5B0C0;
-  --color-brand-line: #2A3545;
-  --color-brand-accent: #8BE5FF;
-  --color-brand-accent-strong: #43BFEA;
-  --color-brand-focus: #C1F1FF;
-  --color-brand-error: #FF7777;
-  --color-brand-success: #86D6AD;
+  --color-brand-bg: #F0F5FA;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-raised: #E0F2FE;
+  --color-brand-text: #1E293B;
+  --color-brand-muted: #64748B;
+  --color-brand-line: #E2E8F0;
+  --color-brand-accent: #0284C7;
+  --color-brand-accent-strong: #0369A1;
+  --color-brand-focus: #BAE6FD;
+  --color-brand-error: #EF4444;
+  --color-brand-success: #10B981;
   
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
 :root {
-  --background: #090D14;
-  --foreground: #F3F6FA;
+  --background: #F0F5FA;
+  --foreground: #1E293B;
 }
 
 body {
-  background-color: #090D14;
-  color: #F3F6FA;
+  background-color: #F0F5FA;
+  color: #1E293B;
   font-family: var(--font-sans);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -32,54 +32,223 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 229, 255, 0.25);
-  color: #FFFFFF;
+  background: rgba(56, 189, 248, 0.28);
+  color: #0284C7;
 }
 
-/* Glassmorphism Frosted Glass Utilities */
-.glass-nav {
-  background-color: rgba(9, 13, 20, 0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-}
+/* ========================================================
+   BOLD & THICK CLAYMORPHISM DESIGN SYSTEM (Tactile 3D Soft Clay - Pastel Blue)
+   ======================================================== */
 
+/* 1. Thick Claymorphic White Card / Container */
+.clay-card,
 .glass-card {
-  background-color: rgba(17, 24, 36, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(42, 53, 69, 0.8);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FFFFFF;
+  border-radius: 2rem;
+  border: 2.5px solid #FFFFFF;
+  box-shadow:
+    18px 28px 46px -8px rgba(14, 165, 233, 0.13),
+    8px 14px 24px -4px rgba(15, 23, 42, 0.04),
+    -10px -10px 28px rgba(255, 255, 255, 0.95),
+    inset 5px 5px 12px rgba(255, 255, 255, 1),
+    inset -6px -6px 16px rgba(14, 165, 233, 0.06);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.clay-card:hover,
 .glass-card:hover {
-  background-color: rgba(23, 34, 50, 0.75);
-  border-color: rgba(139, 229, 255, 0.35);
-  box-shadow: 0 8px 30px -4px rgba(139, 229, 255, 0.08);
+  transform: translateY(-4px) scale(1.008);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow:
+    22px 36px 56px -8px rgba(14, 165, 233, 0.19),
+    10px 18px 30px -4px rgba(15, 23, 42, 0.05),
+    -12px -12px 32px rgba(255, 255, 255, 1),
+    inset 6px 6px 14px rgba(255, 255, 255, 1),
+    inset -7px -7px 18px rgba(14, 165, 233, 0.09);
 }
 
-.glass-modal {
-  background-color: rgba(17, 24, 36, 0.85);
+/* 2. Thick Claymorphic Pastel Blue Accent Card */
+.clay-card-blue,
+.clay-card-orange {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+  color: #FFFFFF;
+  border-radius: 2rem;
+  border: 2.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 20px 40px -6px rgba(14, 165, 233, 0.42),
+    0 10px 20px -3px rgba(14, 165, 233, 0.28),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.65),
+    inset -5px -5px 14px rgba(3, 105, 161, 0.4);
+}
+
+/* 3. Thick Claymorphic Floating Header / Nav */
+.clay-nav,
+.glass-nav {
+  background-color: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  border-bottom: 2.5px solid rgba(226, 232, 240, 0.9);
+  box-shadow:
+    0 16px 36px -8px rgba(14, 165, 233, 0.08),
+    0 6px 16px -2px rgba(15, 23, 42, 0.03),
+    inset 0 3px 6px rgba(255, 255, 255, 1),
+    inset 0 -3px 6px rgba(14, 165, 233, 0.03);
 }
 
+/* 4. Deep Inset Clay (Inputs, Textarea, Carved Wells) */
+.clay-inset {
+  background-color: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  border-radius: 1.25rem;
+  box-shadow:
+    inset 4px 4px 9px rgba(15, 23, 42, 0.05),
+    inset -4px -4px 9px rgba(255, 255, 255, 0.95),
+    0 2px 5px rgba(255, 255, 255, 0.9);
+  transition: all 0.22s ease;
+}
+
+.clay-inset:focus-within,
+.clay-inset:focus {
+  border-color: #38BDF8;
+  box-shadow:
+    inset 3px 3px 7px rgba(15, 23, 42, 0.04),
+    0 0 0 4px rgba(56, 189, 248, 0.22);
+}
+
+/* 5. Thick Claymorphic Button: Primary (Pastel Blue 3D Inflated Pillow) */
+.clay-btn-primary {
+  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #0284C7 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: 1.25rem;
+  border: 2.5px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 14px 28px -4px rgba(14, 165, 233, 0.42),
+    0 8px 16px -2px rgba(14, 165, 233, 0.28),
+    -3px -3px 8px rgba(255, 255, 255, 0.6),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.7),
+    inset -4px -4px 9px rgba(3, 105, 161, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-primary:hover {
+  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #0EA5E9 100%);
+  box-shadow:
+    0 20px 36px -4px rgba(14, 165, 233, 0.52),
+    0 10px 20px -2px rgba(14, 165, 233, 0.35),
+    -4px -4px 10px rgba(255, 255, 255, 0.8),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.8),
+    inset -5px -5px 11px rgba(3, 105, 161, 0.4);
+  transform: translateY(-2px) scale(1.015);
+}
+
+.clay-btn-primary:active {
+  transform: translateY(2px) scale(0.985);
+  box-shadow:
+    0 6px 14px -2px rgba(14, 165, 233, 0.35),
+    inset 3px 3px 8px rgba(15, 23, 42, 0.2),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* 6. Thick Claymorphic Button: Secondary (White 3D Inflated Cushion) */
+.clay-btn-secondary {
+  background: #FFFFFF;
+  color: #1E293B;
+  font-weight: 700;
+  border-radius: 1.25rem;
+  border: 2.5px solid #FFFFFF;
+  box-shadow:
+    0 12px 26px -4px rgba(14, 165, 233, 0.12),
+    0 6px 14px -2px rgba(15, 23, 42, 0.03),
+    -4px -4px 12px rgba(255, 255, 255, 1),
+    inset 3px 3px 7px rgba(255, 255, 255, 1),
+    inset -4px -4px 10px rgba(14, 165, 233, 0.06);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-secondary:hover {
+  color: #0284C7;
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow:
+    0 16px 32px -4px rgba(14, 165, 233, 0.16),
+    0 8px 18px -2px rgba(14, 165, 233, 0.07),
+    -5px -5px 14px rgba(255, 255, 255, 1),
+    inset 4px 4px 9px rgba(255, 255, 255, 1),
+    inset -5px -5px 12px rgba(14, 165, 233, 0.09);
+  transform: translateY(-2px) scale(1.015);
+}
+
+.clay-btn-secondary:active {
+  transform: translateY(2px) scale(0.985);
+  box-shadow:
+    0 5px 10px -2px rgba(14, 165, 233, 0.1),
+    inset 3px 3px 6px rgba(15, 23, 42, 0.06),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* 7. Thick Claymorphic Badge / Tag (Pill 3D Capsule) */
+.clay-badge,
 .glass-badge {
-  background-color: rgba(139, 229, 255, 0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(139, 229, 255, 0.2);
+  background: #FFFFFF;
+  border-radius: 9999px;
+  border: 2px solid #FFFFFF;
+  color: #0284C7;
+  font-weight: 700;
+  box-shadow:
+    0 8px 18px -3px rgba(14, 165, 233, 0.14),
+    0 3px 8px -1px rgba(15, 23, 42, 0.03),
+    -3px -3px 10px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 5px rgba(14, 165, 233, 0.1);
+}
+
+/* 8. Thick Claymorphic Icon Box (Chunky 3D Cushion) */
+.clay-icon-box {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border-radius: 1.25rem;
+  border: 2.5px solid #FFFFFF;
+  color: #0284C7;
+  box-shadow:
+    0 10px 22px -4px rgba(14, 165, 233, 0.16),
+    0 4px 10px -2px rgba(15, 23, 42, 0.03),
+    -4px -4px 12px rgba(255, 255, 255, 1),
+    inset 3px 3px 6px rgba(255, 255, 255, 1),
+    inset -3px -3px 8px rgba(14, 165, 233, 0.1);
+}
+
+/* 9. Thick Claymorphic Modal Card */
+.clay-modal,
+.glass-modal {
+  background-color: #FFFFFF;
+  border-radius: 2.25rem;
+  border: 3.5px solid #FFFFFF;
+  box-shadow:
+    0 36px 72px -12px rgba(14, 165, 233, 0.2),
+    0 18px 36px -6px rgba(15, 23, 42, 0.08),
+    -12px -12px 32px rgba(255, 255, 255, 0.9),
+    inset 6px 6px 14px rgba(255, 255, 255, 1),
+    inset -7px -7px 18px rgba(14, 165, 233, 0.06);
 }
 
 /* Animations */
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursorBlink 0.85s step-start infinite;
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -88,7 +257,16 @@ body {
 }
 
 .animate-slide-up {
-  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideUp 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 32000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Reduced Motion Override for Accessibility */

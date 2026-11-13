@@ -1,5 +1,5 @@
 /**
- * Kanal komunikasi LENTERA DAHAYU (dipakai di beranda).
+ * Kanal komunikasi R21F_webdev (dipakai di beranda).
  *
  * CARA MENGAKTIFKAN KANAL:
  * Isi field `href` dengan URL resmi. Selama `href` kosong (undefined),

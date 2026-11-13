@@ -5,6 +5,7 @@ import { isValidLocale, getDictionary } from "@/lib/i18n";
 import { constructMetadata } from "@/lib/metadata";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
+import { TeamSection } from "@/components/team/team-section";
 import { Compass, Target, Zap, Shield, ArrowRight } from "lucide-react";
 
 interface AboutPageProps {
@@ -49,30 +50,30 @@ export default async function AboutPage({ params }: AboutPageProps) {
       />
 
       {/* Positioning Section */}
-      <div className="glass-card rounded-2xl p-8 sm:p-12 mb-16 border border-[#2A3545]">
+      <div className="clay-card rounded-[36px] p-8 sm:p-12 mb-16 border-[2.5px] border-white">
         <div className="max-w-3xl space-y-6">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#8BE5FF] uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0284C7] uppercase tracking-wider">
             <Compass className="w-4 h-4" />
             <span>Fokus Studio & Filosofi Desain</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#F3F6FA]">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1E293B]">
             {dict.about.positioningTitle}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#A5B0C0] leading-relaxed">
+          <p className="text-base sm:text-lg text-[#64748B] leading-relaxed">
             {dict.about.positioningText}
           </p>
 
-          <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
-            Nama <strong className="text-[#F3F6FA]">LENTERA DAHAYU</strong> melambangkan pencarian akan kejelasan di tengah kegelapan kompleksitas teknis. Kami meyakini bahwa teknologi terbaik adalah teknologi yang tidak membebani, bekerja secara sunyi dengan reliabilitas tinggi, dan memberikan keleluasaan bagi bisnis untuk berkembang tanpa terhambat rapuhnya infrastruktur.
+          <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">
+            Nama <strong className="text-[#1E293B]">R21F_webdev</strong> melambangkan dedikasi kami dalam menghadirkan solusi rekayasa perangkat lunak yang tangguh, modern, dan presisi. Kami meyakini bahwa teknologi terbaik adalah teknologi yang tidak membebani, bekerja secara sunyi dengan reliabilitas tinggi, dan memberikan keleluasaan bagi bisnis untuk berkembang tanpa terhambat rapuhnya infrastruktur.
           </p>
         </div>
       </div>
 
       {/* Principles Section */}
       <div className="mb-16">
-        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#F3F6FA] mb-8">
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#1E293B] mb-8">
           {dict.about.principlesTitle}
         </h2>
 
@@ -83,17 +84,17 @@ export default async function AboutPage({ params }: AboutPageProps) {
             return (
               <div
                 key={principle.title}
-                className="glass-card rounded-2xl p-7 border border-[#2A3545]"
+                className="clay-card rounded-[32px] p-8 border-[2.5px] border-white transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center mb-5">
-                  <IconComp className="w-5 h-5" />
+                <div className="clay-icon-box w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                  <IconComp className="w-6 h-6" />
                 </div>
 
-                <h3 className="text-lg font-bold text-[#F3F6FA] mb-3">
+                <h3 className="text-xl font-bold text-[#1E293B] mb-3">
                   {principle.title}
                 </h3>
 
-                <p className="text-sm text-[#A5B0C0] leading-relaxed">
+                <p className="text-sm text-[#64748B] leading-relaxed">
                   {principle.description}
                 </p>
               </div>
@@ -102,12 +103,15 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </div>
 
+      {/* Engineering Team ID Cards Section */}
+      <TeamSection dict={dict} className="mb-16" />
+
       {/* Action Banner */}
-      <div className="rounded-2xl p-8 sm:p-12 text-center max-w-3xl mx-auto bg-gradient-to-br from-[#172232] to-[#111824] border border-[#8BE5FF]/20">
-        <h3 className="text-2xl font-bold text-[#F3F6FA] mb-3">
+      <div className="clay-card rounded-[36px] p-8 sm:p-12 text-center max-w-3xl mx-auto bg-gradient-to-br from-white to-[#F0F9FF] border-[3px] border-white shadow-[0_20px_45px_-8px_rgba(14,165,233,0.18)]">
+        <h3 className="text-2xl font-bold text-[#1E293B] mb-3">
           {dict.common.discussProject}
         </h3>
-        <p className="text-sm text-[#A5B0C0] leading-relaxed max-w-xl mx-auto mb-8">
+        <p className="text-sm text-[#64748B] leading-relaxed max-w-xl mx-auto mb-8">
           Konsultasikan tantangan engineering perangkat lunak dan arsitektur produk Anda bersama tim kami.
         </p>
         <Button variant="primary" size="lg" href={`/${locale}/contact`}>

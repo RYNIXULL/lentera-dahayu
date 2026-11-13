@@ -22,14 +22,14 @@ export function ProductGrid({
 }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="rounded-2xl border border-[#2A3545] bg-[#111824]/50 backdrop-blur-md p-8 sm:p-12 text-center max-w-2xl mx-auto my-8">
-        <div className="w-14 h-14 rounded-2xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] mx-auto flex items-center justify-center mb-5">
-          <PackageOpen className="w-7 h-7" />
+      <div className="clay-card rounded-[32px] border-[2.5px] border-white p-8 sm:p-12 text-center max-w-2xl mx-auto my-8">
+        <div className="clay-icon-box w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-5">
+          <PackageOpen className="w-8 h-8" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#F3F6FA] mb-3">
+        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#1E293B] mb-3">
           {isFiltered ? dict.common.emptyFilterTitle : dict.common.emptyCatalogTitle}
         </h3>
-        <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed max-w-lg mx-auto mb-8">
+        <p className="text-sm sm:text-base text-[#64748B] leading-relaxed max-w-lg mx-auto mb-8">
           {isFiltered ? dict.common.emptyFilterDesc : dict.common.emptyCatalogDesc}
         </p>
 

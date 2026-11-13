@@ -42,9 +42,9 @@ export function MobileNavigation({
       role="dialog"
       aria-modal="true"
       aria-label="Navigasi Seluler"
-      className="fixed inset-0 top-20 z-40 md:hidden bg-[#090D14]/95 backdrop-blur-xl border-t border-[#2A3545] p-6 flex flex-col justify-between overflow-y-auto animate-slide-up"
+      className="fixed inset-0 top-20 z-40 md:hidden bg-[#F0F5FA]/95 backdrop-blur-xl border-t border-[#E2E8F0] p-6 flex flex-col justify-between overflow-y-auto animate-slide-up shadow-2xl"
     >
-      <nav className="flex flex-col gap-2 pt-2">
+      <nav className="flex flex-col gap-2.5 pt-2">
         {links.map((link) => {
           const active =
             link.href === `/${currentLocale}`
@@ -56,20 +56,20 @@ export function MobileNavigation({
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className={`flex items-center justify-between p-3.5 rounded-xl text-base font-medium transition-all ${
+              className={`flex items-center justify-between p-4 rounded-2xl text-base transition-all ${
                 active
-                  ? "bg-[#172232] text-[#8BE5FF] border border-[#8BE5FF]/30 font-semibold"
-                  : "text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-[#111824]"
+                  ? "bg-white text-[#0284C7] border-2 border-white font-bold shadow-[0_8px_18px_rgba(14,165,233,0.16),inset_2px_2px_4px_#FFFFFF,inset_-2px_-2px_4px_rgba(14,165,233,0.06)]"
+                  : "text-[#64748B] hover:text-[#1E293B] hover:bg-white/80 font-semibold"
               }`}
             >
               <span>{link.label}</span>
-              {active && <span className="w-2 h-2 rounded-full bg-[#8BE5FF]" />}
+              {active && <span className="w-3 h-3 rounded-full bg-[#0284C7] shadow-[0_0_10px_#38BDF8]" />}
             </Link>
           );
         })}
       </nav>
 
-      <div className="pt-6 border-t border-[#2A3545] mt-6 flex flex-col gap-3">
+      <div className="pt-6 border-t border-[#E2E8F0] mt-6 flex flex-col gap-3">
         <Button
           variant="primary"
           size="lg"

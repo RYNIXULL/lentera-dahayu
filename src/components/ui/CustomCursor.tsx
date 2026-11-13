@@ -49,8 +49,8 @@ export function CustomCursor() {
       <div
         className={`-translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ${
           isHovered
-            ? "w-10 h-10 bg-[#8BE5FF]/20 border border-[#8BE5FF] backdrop-blur-[2px] scale-110"
-            : "w-3 h-3 bg-[#8BE5FF] shadow-[0_0_8px_#8BE5FF]"
+            ? "w-10 h-10 bg-[#0284C7]/15 border-2 border-[#0284C7] backdrop-blur-[2px] scale-110"
+            : "w-3 h-3 bg-[#0284C7] shadow-[0_0_10px_#38BDF8]"
         }`}
       />
     </div>

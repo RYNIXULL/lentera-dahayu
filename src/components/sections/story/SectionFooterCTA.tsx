@@ -47,37 +47,37 @@ export function SectionFooterCTA() {
   return (
     <section
       id="sec-cta"
-      className="min-h-screen relative flex flex-col justify-between px-4 sm:px-6 lg:px-12 py-24 border-t border-[#2A3545]/60 select-none"
+      className="min-h-screen relative flex flex-col justify-between px-4 sm:px-6 lg:px-12 py-24 border-t border-[#E2E8F0] select-none"
     >
       <div className="max-w-3xl mx-auto z-10 w-full text-center space-y-8 my-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-[#8BE5FF] glass-badge mx-auto">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#86D6AD]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold text-[#0284C7] clay-badge mx-auto">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#059669]" />
           <span>REALITY CHECK // 14. THE PITCH</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#F3F6FA] leading-[1.05]">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#1E293B] leading-[1.05]">
           We caught your attention with a made-up product.{" "}
-          <span className="text-[#8BE5FF]">Imagine what we can do for your brand.</span>
+          <span className="text-[#0284C7]">Imagine what we can do for your brand.</span>
         </h2>
 
-        <p className="text-base sm:text-lg text-[#A5B0C0] max-w-xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg text-[#64748B] max-w-xl mx-auto leading-relaxed">
           High-performance 3D WebGL, tactile storytelling, and silky smooth interactions turn ordinary products into unforgettable digital experiences.
         </p>
 
         {/* Consultation Form */}
-        <div className="max-w-md mx-auto glass-card rounded-2xl p-6 border border-[#2A3545]">
+        <div className="max-w-md mx-auto clay-card rounded-3xl p-6 sm:p-8 border border-[#E2E8F0]">
           {sent ? (
             <div className="py-6 space-y-3">
-              <CheckCircle2 className="w-10 h-10 text-[#86D6AD] mx-auto" />
-              <h3 className="text-lg font-bold text-[#F3F6FA]">Pesan Terkirim</h3>
-              <p className="text-xs text-[#A5B0C0]">
+              <CheckCircle2 className="w-10 h-10 text-[#059669] mx-auto" />
+              <h3 className="text-lg font-bold text-[#1E293B]">Pesan Terkirim</h3>
+              <p className="text-xs text-[#64748B]">
                 Tim kami siap berkolaborasi untuk mewujudkan storytelling 3D spektakuler berikutnya.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 text-left">
               <div>
-                <label className="block text-xs font-mono text-[#A5B0C0] uppercase mb-1">
+                <label className="block text-xs font-mono text-[#64748B] uppercase font-bold mb-1">
                   WORK EMAIL
                 </label>
                 <input
@@ -86,12 +86,12 @@ export function SectionFooterCTA() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="alex@yourbrand.com"
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#090D14]/80 border border-[#2A3545] text-sm text-[#F3F6FA] focus:outline-none focus:border-[#8BE5FF] transition-all font-mono"
+                  className="w-full px-4 py-3 rounded-2xl bg-[#FFFDFB] border border-[#E2E8F0] text-sm text-[#1E293B] focus:outline-none focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.03),inset_-2px_-2px_4px_rgba(255,255,255,0.95)] transition-all font-mono"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-[#A5B0C0] uppercase mb-1">
+                <label className="block text-xs font-mono text-[#64748B] uppercase font-bold mb-1">
                   PROJECT / PRODUCT VISION (OPTIONAL)
                 </label>
                 <input
@@ -99,7 +99,7 @@ export function SectionFooterCTA() {
                   value={projectBrief}
                   onChange={(e) => setProjectBrief(e.target.value)}
                   placeholder="Tell us about the product you want to elevate..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#090D14]/80 border border-[#2A3545] text-sm text-[#F3F6FA] focus:outline-none focus:border-[#8BE5FF] transition-all font-mono"
+                  className="w-full px-4 py-3 rounded-2xl bg-[#FFFDFB] border border-[#E2E8F0] text-sm text-[#1E293B] focus:outline-none focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.03),inset_-2px_-2px_4px_rgba(255,255,255,0.95)] transition-all font-mono"
                 />
               </div>
 
@@ -107,7 +107,7 @@ export function SectionFooterCTA() {
                 type="submit"
                 disabled={loading}
                 data-cursor="pointer"
-                className="w-full py-3.5 rounded-xl bg-[#8BE5FF] text-[#090D14] font-mono font-bold text-sm hover:bg-[#43BFEA] transition-all flex items-center justify-center gap-2"
+                className="clay-btn-primary w-full py-4 font-mono font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
               >
                 {loading ? (
                   <span>TRANSMITTING...</span>
@@ -123,7 +123,7 @@ export function SectionFooterCTA() {
         </div>
 
         {/* Fictional Disclaimer */}
-        <div className="p-4 rounded-xl bg-[#111824]/40 border border-[#2A3545] text-xs font-mono text-[#A5B0C0]/70 max-w-xl mx-auto">
+        <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] text-xs font-mono text-[#64748B] max-w-xl mx-auto shadow-xs">
           <p>
             <strong>LEGAL & CREATIVE DISCLAIMER:</strong> VESSEL-01 is a fictional satirical demonstration piece created to showcase state-of-the-art scroll-driven 3D WebGL engineering. No ceramic cups were harmed in the making of this website.
           </p>
@@ -131,7 +131,7 @@ export function SectionFooterCTA() {
       </div>
 
       {/* Footer Bar */}
-      <footer className="pt-12 border-t border-[#2A3545]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#A5B0C0]/60 z-10 max-w-7xl mx-auto w-full">
+      <footer className="pt-12 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#64748B]/80 z-10 max-w-7xl mx-auto w-full">
         <p>© 2026 VESSEL-01 / CREATIVE 3D STORYTELLING ARCHITECTURE</p>
         <p>BUILT WITH THREE.JS • R3F • GSAP • LENIS • NEXT.JS</p>
       </footer>

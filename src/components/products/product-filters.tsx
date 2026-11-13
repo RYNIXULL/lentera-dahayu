@@ -39,14 +39,14 @@ export function ProductFilters({
   ];
 
   return (
-    <div className="glass-card rounded-2xl p-4 sm:p-6 mb-10 space-y-4">
+    <div className="clay-card rounded-[32px] p-6 sm:p-8 mb-10 space-y-4 border-[2.5px] border-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4">
         {/* Search Input */}
         <div className="lg:col-span-6 relative">
           <label htmlFor="catalog-search" className="sr-only">
             {dict.common.searchPlaceholder}
           </label>
-          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#A5B0C0]">
+          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#64748B]">
             <Search className="w-4 h-4" />
           </div>
           <input
@@ -55,14 +55,14 @@ export function ProductFilters({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder={dict.common.searchPlaceholder}
-            className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] placeholder-[#A5B0C0]/60 focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+            className="w-full pl-10 pr-10 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] placeholder-[#64748B]/60 focus:outline-none focus:ring-2 focus:ring-[#0284C7]/30 transition-all"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => onSearchChange("")}
               aria-label="Bersihkan pencarian"
-              className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#A5B0C0] hover:text-[#F3F6FA]"
+              className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#64748B] hover:text-[#1E293B]"
             >
               <X className="w-4 h-4" />
             </button>
@@ -78,7 +78,7 @@ export function ProductFilters({
             id="category-select"
             value={selectedCategory}
             onChange={(e) => onCategoryChange(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+            className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#0284C7]/30 transition-all cursor-pointer"
           >
             <option value="all">{dict.common.allCategories}</option>
             {categories.map((cat) => (
@@ -98,7 +98,7 @@ export function ProductFilters({
             id="status-select"
             value={selectedStatus}
             onChange={(e) => onStatusChange(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+            className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#0284C7]/30 transition-all cursor-pointer"
           >
             {statuses.map((st) => (
               <option key={st.value} value={st.value}>
@@ -111,15 +111,15 @@ export function ProductFilters({
 
       {/* Filter Active State & Reset */}
       {isFiltered && (
-        <div className="pt-2 flex items-center justify-between text-xs text-[#A5B0C0] border-t border-[#2A3545]/60">
-          <div className="flex items-center gap-1.5">
-            <Filter className="w-3.5 h-3.5 text-[#8BE5FF]" />
+        <div className="pt-2 flex items-center justify-between text-xs text-[#64748B] border-t border-[#E2E8F0]">
+          <div className="flex items-center gap-1.5 font-medium">
+            <Filter className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>Filter aktif</span>
           </div>
           <button
             type="button"
             onClick={onReset}
-            className="text-[#8BE5FF] hover:underline font-medium focus:outline-none"
+            className="text-[#0284C7] hover:underline font-bold focus:outline-none cursor-pointer"
           >
             {dict.common.resetFilters}
           </button>

@@ -81,7 +81,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
     <section
       id="contact-form"
       aria-labelledby="contact-heading"
-      className="py-20 md:py-28 border-t border-[#2A3545]/60 relative"
+      className="py-20 md:py-28 border-t border-[#E2E8F0] relative"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -91,16 +91,16 @@ export function ContactSection({ dict }: ContactSectionProps) {
           align="center"
         />
 
-        <div className="max-w-2xl mx-auto glass-card rounded-2xl p-6 sm:p-10 border border-[#2A3545]">
+        <div className="max-w-2xl mx-auto clay-card rounded-[36px] p-6 sm:p-10 border-[2.5px] border-white">
           {submitted ? (
             <div className="text-center py-8 space-y-4 animate-slide-up">
-              <div className="w-14 h-14 rounded-2xl bg-[#86D6AD]/15 border border-[#86D6AD]/30 text-[#86D6AD] flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-7 h-7" />
+              <div className="w-16 h-16 rounded-2xl bg-[#ECFDF5] border-2 border-white text-[#059669] flex items-center justify-center mx-auto shadow-[0_8px_20px_rgba(16,185,129,0.18),inset_2px_2px_4px_#FFFFFF]">
+                <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-[#F3F6FA]">
+              <h3 className="text-2xl font-bold text-[#1E293B]">
                 Permintaan Diterima
               </h3>
-              <p className="text-sm text-[#A5B0C0] leading-relaxed max-w-md mx-auto">
+              <p className="text-sm text-[#64748B] leading-relaxed max-w-md mx-auto">
                 {dict.contact.successMessage}
               </p>
               <div className="pt-4">
@@ -124,11 +124,11 @@ export function ContactSection({ dict }: ContactSectionProps) {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Form Description */}
-              <div className="pb-2 border-b border-[#2A3545]">
-                <h3 className="text-lg font-bold text-[#F3F6FA]">
+              <div className="pb-3 border-b border-[#E2E8F0]">
+                <h3 className="text-lg font-bold text-[#1E293B]">
                   {dict.contact.formTitle}
                 </h3>
-                <p className="text-xs text-[#A5B0C0] mt-1">
+                <p className="text-xs text-[#64748B] mt-1">
                   {dict.contact.formDesc}
                 </p>
               </div>
@@ -137,9 +137,9 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <label
                   htmlFor="contact-name"
-                  className="block text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-2"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold mb-2"
                 >
-                  {dict.contact.nameLabel} <span className="text-[#8BE5FF]">*</span>
+                  {dict.contact.nameLabel} <span className="text-[#0284C7]">*</span>
                 </label>
                 <input
                   id="contact-name"
@@ -150,7 +150,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   placeholder="Nama atau institusi Anda"
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] placeholder-[#A5B0C0]/50 focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+                  className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] placeholder-[#64748B]/60 focus:outline-none focus:ring-2 focus:ring-[#0284C7]/40 transition-all"
                 />
               </div>
 
@@ -158,9 +158,9 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <label
                   htmlFor="contact-email"
-                  className="block text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-2"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold mb-2"
                 >
-                  {dict.contact.emailLabel} <span className="text-[#8BE5FF]">*</span>
+                  {dict.contact.emailLabel} <span className="text-[#0284C7]">*</span>
                 </label>
                 <input
                   id="contact-email"
@@ -171,7 +171,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   placeholder="name@organization.com"
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] placeholder-[#A5B0C0]/50 focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+                  className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] placeholder-[#64748B]/60 focus:outline-none focus:ring-2 focus:ring-[#0284C7]/40 transition-all"
                 />
               </div>
 
@@ -179,7 +179,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <label
                   htmlFor="contact-scope"
-                  className="block text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-2"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold mb-2"
                 >
                   {dict.contact.scopeLabel}
                 </label>
@@ -189,7 +189,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, scope: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all"
+                  className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#0284C7]/40 transition-all cursor-pointer"
                 >
                   {scopeOptions.map((opt) => (
                     <option key={opt} value={opt}>
@@ -203,10 +203,10 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <label
                   htmlFor="contact-message"
-                  className="block text-xs font-mono uppercase tracking-wider text-[#A5B0C0] mb-2"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#64748B] font-semibold mb-2"
                 >
                   {dict.contact.messageLabel}{" "}
-                  <span className="text-[#8BE5FF]">*</span>
+                  <span className="text-[#0284C7]">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -217,19 +217,19 @@ export function ContactSection({ dict }: ContactSectionProps) {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   placeholder="Jelaskan gambaran sistem, batasan teknis, atau target produk yang ingin Anda diskusikan..."
-                  className="w-full px-4 py-3 rounded-xl bg-[#090D14]/70 border border-[#2A3545] text-sm text-[#F3F6FA] placeholder-[#A5B0C0]/50 focus:outline-none focus:border-[#8BE5FF] focus:ring-1 focus:ring-[#8BE5FF] transition-all resize-y"
+                  className="w-full px-4 py-3.5 rounded-2xl clay-inset text-sm text-[#1E293B] placeholder-[#64748B]/60 focus:outline-none focus:ring-2 focus:ring-[#0284C7]/40 transition-all resize-y"
                 />
               </div>
 
               {/* Privacy Notice */}
-              <div className="flex items-start gap-2 text-xs text-[#A5B0C0]/80">
-                <ShieldCheck className="w-4 h-4 text-[#86D6AD] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2 text-xs text-[#64748B]">
+                <ShieldCheck className="w-4 h-4 text-[#059669] shrink-0 mt-0.5" />
                 <span>{dict.contact.privacyNotice}</span>
               </div>
 
               {/* Channel Status Info */}
-              <div className="flex items-start gap-2 p-3 rounded-xl bg-[#172232]/50 border border-[#2A3545] text-xs text-[#A5B0C0]">
-                <Info className="w-4 h-4 text-[#8BE5FF] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-br from-[#F0F9FF] to-[#E0F2FE] border-2 border-white text-xs text-[#64748B] shadow-[inset_2px_2px_4px_#FFFFFF,0_4px_12px_rgba(14,165,233,0.08)]">
+                <Info className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
                 <span>
                   {dict.contact.channelStatusPending} Formulir ini aktif dan langsung masuk ke antrean triage rekayasa teknis kami.
                 </span>

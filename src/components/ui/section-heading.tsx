@@ -25,19 +25,19 @@ export function SectionHeading({
     >
       {eyebrow && (
         <div
-          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wider uppercase text-[#8BE5FF] glass-badge mb-4 ${
+          className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider uppercase text-[#0284C7] clay-badge mb-5 border-2 border-white ${
             isCenter ? "mx-auto" : ""
           }`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#8BE5FF] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#0284C7] animate-pulse shadow-[0_0_8px_#38BDF8]" />
           {eyebrow}
         </div>
       )}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#F3F6FA] leading-[1.15]">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E293B] leading-[1.15]">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-base sm:text-lg text-[#A5B0C0] leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg text-[#64748B] leading-relaxed">
           {description}
         </p>
       )}

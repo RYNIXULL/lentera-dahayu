@@ -20,10 +20,10 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
     <Link
       href={targetHref}
       aria-label={`Ganti bahasa ke ${targetLocale === "en" ? "English" : "Bahasa Indonesia"}`}
-      className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-[#A5B0C0] hover:text-[#F3F6FA] border border-[#2A3545] hover:border-[#8BE5FF]/40 bg-[#111824]/60 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C1F1FF]"
+      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl text-xs font-bold text-[#64748B] hover:text-[#0284C7] border-2 border-white bg-white shadow-[0_6px_14px_-2px_rgba(14,165,233,0.12),inset_2px_2px_4px_#FFFFFF,inset_-2px_-2px_4px_rgba(14,165,233,0.06)] active:shadow-[inset_2px_2px_4px_rgba(0,0,0,0.08)] transition-all focus:outline-none focus:ring-2 focus:ring-[#0284C7] hover:-translate-y-0.5"
     >
-      <Globe className="w-3.5 h-3.5 text-[#8BE5FF]" />
-      <span className="font-mono uppercase font-semibold">
+      <Globe className="w-3.5 h-3.5 text-[#0284C7]" />
+      <span className="font-mono uppercase font-bold">
         {targetLocale}
       </span>
     </Link>

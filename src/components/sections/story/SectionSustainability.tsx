@@ -38,17 +38,17 @@ export function SectionSustainability() {
     >
       <div className="max-w-3xl z-10 space-y-8">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-[#86D6AD] glass-badge mb-4">
-            <Leaf className="w-3.5 h-3.5 text-[#86D6AD]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold text-[#059669] bg-emerald-50 border border-emerald-200/80 shadow-xs mb-4">
+            <Leaf className="w-3.5 h-3.5 text-[#059669]" />
             <span>ECOSYSTEM // 09. GEOLOGICAL SUSTAINABILITY</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F3F6FA] leading-[1.05]">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#1E293B] leading-[1.05]">
             Built to outlast{" "}
-            <span className="text-[#86D6AD]">civilization&apos;s Wi-Fi.</span>
+            <span className="text-[#0284C7]">civilization&apos;s Wi-Fi.</span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-[#A5B0C0] leading-relaxed max-w-xl">
+          <p className="mt-4 text-sm sm:text-base text-[#64748B] leading-relaxed max-w-xl">
             Consumer hardware ends up in e-waste within 24 months. VESSEL-01 is composed purely of earthen minerals fired at 1,280°C, ensuring complete obsolescence-proof utility until the heat death of the universe.
           </p>
         </div>
@@ -58,18 +58,18 @@ export function SectionSustainability() {
           {stats.map((st) => (
             <div
               key={st.value}
-              className="glass-card rounded-2xl p-6 border border-[#2A3545] space-y-2 hover:border-[#86D6AD]/40 transition-colors"
+              className="clay-card rounded-3xl p-6 border border-[#E2E8F0] space-y-2 hover:border-[#0284C7]/40 transition-colors"
             >
               <div className="flex items-baseline gap-2 font-mono">
-                <span className="text-4xl sm:text-5xl font-black text-[#F3F6FA]">
+                <span className="text-4xl sm:text-5xl font-black text-[#1E293B]">
                   {st.value}
                 </span>
-                <span className="text-xs text-[#86D6AD] font-bold">
+                <span className="text-xs text-[#0284C7] font-bold">
                   {st.unit}
                 </span>
               </div>
-              <h3 className="text-sm font-bold text-[#F3F6FA]">{st.label}</h3>
-              <p className="text-xs text-[#A5B0C0] leading-relaxed">{st.desc}</p>
+              <h3 className="text-sm font-bold text-[#1E293B]">{st.label}</h3>
+              <p className="text-xs text-[#64748B] leading-relaxed">{st.desc}</p>
             </div>
           ))}
         </div>

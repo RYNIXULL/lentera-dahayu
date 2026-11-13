@@ -37,14 +37,14 @@ export const STORY_CONFIG = {
       "VESSEL-01 is a satirical creative design experiment exploring over-engineered product storytelling and real-time 3D web craft.",
   },
   theme: {
-    bg: "#0B0E14",
-    surface: "#121824",
-    surfaceRaised: "#182234",
-    text: "#F3F6FA",
-    muted: "#94A3B8",
-    accent: "#8BE5FF",
-    accentWarm: "#FF8A65", // Thermal heat accent
-    border: "#253246",
+    bg: "#F0F5FA",
+    surface: "#FFFFFF",
+    surfaceRaised: "#F0F9FF",
+    text: "#1E293B",
+    muted: "#64748B",
+    accent: "#0284C7",
+    accentWarm: "#38BDF8", // Thermal heat accent
+    border: "#E2E8F0",
   },
   keyframes: [
     // 0: Loader
@@ -59,7 +59,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5],
       cameraFov: 42,
       lightIntensity: 1.2,
-      bgColor: "#090D14",
+      bgColor: "#F0F5FA",
     },
     // 1: Hero
     {
@@ -73,7 +73,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.2],
       cameraFov: 42,
       lightIntensity: 1.5,
-      bgColor: "#090D14",
+      bgColor: "#F0F5FA",
     },
     // 2: Parody AI ("Isn't just a mug")
     {
@@ -87,7 +87,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.0],
       cameraFov: 42,
       lightIntensity: 1.6,
-      bgColor: "#0A0F1A",
+      bgColor: "#F0F5FA",
     },
     // 3: Feature: Lift (Exploded View & Wall Thickness)
     {
@@ -101,7 +101,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 6.2],
       cameraFov: 46,
       lightIntensity: 1.8,
-      bgColor: "#0B111D",
+      bgColor: "#F0F5FA",
     },
     // 4: Feature: Thermal / Stability (Heat Gradient Shader)
     {
@@ -115,7 +115,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.0],
       cameraFov: 40,
       lightIntensity: 1.4,
-      bgColor: "#110D12",
+      bgColor: "#F0F5FA",
     },
     // 5: Feature: Perfect Geometry (Wireframe Overlay)
     {
@@ -129,7 +129,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.0],
       cameraFov: 40,
       lightIntensity: 1.7,
-      bgColor: "#090E17",
+      bgColor: "#F0F5FA",
     },
     // 6: Feature: Interactive Toy (Flip & Underside Secret)
     {
@@ -143,7 +143,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 4.8],
       cameraFov: 44,
       lightIntensity: 1.8,
-      bgColor: "#0B1019",
+      bgColor: "#F0F5FA",
     },
     // 7: Feature: Grip / Material (Macro Close-up)
     {
@@ -157,7 +157,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 4.2],
       cameraFov: 38,
       lightIntensity: 1.6,
-      bgColor: "#0D1117",
+      bgColor: "#F0F5FA",
     },
     // 8: Sustainability (Stat Counters)
     {
@@ -171,7 +171,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.2],
       cameraFov: 42,
       lightIntensity: 1.5,
-      bgColor: "#090F14",
+      bgColor: "#F0F5FA",
     },
     // 9: Testimonials (Carousel)
     {
@@ -185,7 +185,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.4],
       cameraFov: 42,
       lightIntensity: 1.4,
-      bgColor: "#0A0D14",
+      bgColor: "#F0F5FA",
     },
     // 10: Social Proof Sticker Collage
     {
@@ -199,7 +199,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.5],
       cameraFov: 44,
       lightIntensity: 1.5,
-      bgColor: "#0B0E17",
+      bgColor: "#F0F5FA",
     },
     // 11: Variants (Base / Pro / Pro Max)
     {
@@ -213,7 +213,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.5],
       cameraFov: 44,
       lightIntensity: 1.6,
-      bgColor: "#0B101C",
+      bgColor: "#F0F5FA",
     },
     // 12: Open Model / Paper Download
     {
@@ -227,7 +227,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.2],
       cameraFov: 42,
       lightIntensity: 1.5,
-      bgColor: "#090D15",
+      bgColor: "#F0F5FA",
     },
     // 13: CTA + Footer
     {
@@ -241,7 +241,7 @@ export const STORY_CONFIG = {
       cameraPos: [0, 0, 5.0],
       cameraFov: 42,
       lightIntensity: 1.7,
-      bgColor: "#080C12",
+      bgColor: "#F0F5FA",
     },
   ] as Keyframe[],
 };

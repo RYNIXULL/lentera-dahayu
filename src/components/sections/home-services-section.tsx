@@ -15,7 +15,7 @@ export function HomeServicesSection({ dict }: HomeServicesSectionProps) {
     <section
       id="layanan"
       aria-labelledby="services-heading"
-      className="py-20 md:py-28 border-t border-[#2A3545]/60 bg-[#090D14] scroll-mt-20"
+      className="py-20 md:py-28 border-t border-[#E2E8F0] bg-[#F0F5FA] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -31,28 +31,28 @@ export function HomeServicesSection({ dict }: HomeServicesSectionProps) {
             return (
               <div
                 key={service.title}
-                className="glass-card rounded-2xl p-7 flex flex-col justify-between"
+                className="clay-card rounded-[32px] p-8 sm:p-9 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-11 h-11 rounded-xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center mb-6">
-                    <IconComponent className="w-5 h-5" aria-hidden="true" />
+                  <div className="w-14 h-14 rounded-2xl bg-[#F0F9FF] border-2 border-white text-[#0284C7] flex items-center justify-center mb-6 shadow-[0_10px_22px_-4px_rgba(14,165,233,0.18),-3px_-3px_10px_#FFFFFF,inset_3px_3px_6px_#FFFFFF,inset_-3px_-3px_8px_rgba(14,165,233,0.1)]">
+                    <IconComponent className="w-7 h-7" aria-hidden="true" />
                   </div>
 
-                  <h3 className="text-xl font-bold tracking-tight text-[#F3F6FA] mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#1E293B] mb-3">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-[#A5B0C0] leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-[#64748B] leading-relaxed mb-6">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#2A3545]">
-                  <ul className="flex flex-wrap gap-1.5">
+                <div className="pt-5 border-t border-[#E2E8F0]">
+                  <ul className="flex flex-wrap gap-2">
                     {service.platforms.map((platform) => (
                       <li
                         key={platform}
-                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#172232] text-[#A5B0C0] border border-[#2A3545]"
+                        className="text-[11px] font-mono font-bold px-3.5 py-1.5 rounded-full bg-[#F0F9FF] text-[#64748B] border border-sky-200/70 shadow-[inset_1px_1px_2px_#FFFFFF,0_2px_4px_rgba(14,165,233,0.04)]"
                       >
                         {platform}
                       </li>
@@ -64,7 +64,7 @@ export function HomeServicesSection({ dict }: HomeServicesSectionProps) {
           })}
         </div>
 
-        <p className="text-xs text-[#A5B0C0] max-w-xl">{services.note}</p>
+        <p className="text-xs text-[#64748B] max-w-xl">{services.note}</p>
       </div>
     </section>
   );

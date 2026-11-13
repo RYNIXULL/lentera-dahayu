@@ -1,7 +1,8 @@
 import React from "react";
 import { Locale, Dictionary } from "@/types/i18n";
 import { Button } from "@/components/ui/button";
-import { HeroSceneLoader } from "@/components/3d/hero-scene-loader";
+import { R21FHeroLogo } from "@/components/ui/r21f-hero-logo";
+import { TypewriterText } from "@/components/ui/typewriter-text";
 import { ArrowRight, Compass } from "lucide-react";
 
 interface HeroSectionProps {
@@ -17,7 +18,7 @@ export function HeroSection({ dict }: HeroSectionProps) {
     >
       {/* Background depth radial lighting */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8BE5FF]/5 rounded-full blur-[140px] pointer-events-none"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#38BDF8]/15 rounded-full blur-[140px] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -26,21 +27,21 @@ export function HeroSection({ dict }: HeroSectionProps) {
           {/* Editorial Content Column */}
           <div className="lg:col-span-7 z-10 space-y-6 sm:space-y-8 text-left">
             {/* Studio Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-badge text-xs font-mono font-medium text-[#8BE5FF]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8BE5FF] animate-pulse" />
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full clay-badge text-xs font-mono font-bold text-[#0284C7] border-2 border-white shadow-md">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0284C7] animate-pulse shadow-[0_0_10px_#38BDF8]" />
               <span>{dict.hero.badge}</span>
             </div>
 
-            {/* Editorial Headline */}
+            {/* Editorial Headline with Typewriter Effect */}
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F3F6FA] leading-[1.08]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#1E293B] leading-[1.08] min-h-[3.3em] text-balance"
             >
-              {dict.hero.headline}
+              <TypewriterText text={dict.hero.headline} />
             </h1>
 
             {/* Subheadline & Descriptor */}
-            <p className="text-base sm:text-lg md:text-xl text-[#A5B0C0] max-w-2xl leading-relaxed font-normal">
+            <p className="text-base sm:text-lg md:text-xl text-[#64748B] max-w-2xl leading-relaxed font-normal">
               {dict.hero.description}
             </p>
 
@@ -50,7 +51,6 @@ export function HeroSection({ dict }: HeroSectionProps) {
                 variant="primary"
                 size="lg"
                 href="#kontak"
-                className="shadow-[0_0_25px_rgba(139,229,255,0.2)]"
               >
                 <span>{dict.hero.ctaContact}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -62,28 +62,21 @@ export function HeroSection({ dict }: HeroSectionProps) {
             </div>
 
             {/* Micro descriptor metadata */}
-            <div className="pt-4 flex items-center gap-4 text-xs font-mono text-[#A5B0C0]/80">
-              <span className="flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5 text-[#8BE5FF]" />
+            <div className="pt-4 flex items-center gap-4 text-xs font-mono text-[#64748B]">
+              <span className="flex items-center gap-1.5 font-semibold text-[#0284C7]">
+                <Compass className="w-3.5 h-3.5" />
                 {dict.common.brandDomain}
               </span>
-              <span className="hidden sm:inline-block text-[#2A3545]">•</span>
+              <span className="hidden sm:inline-block text-[#E2E8F0]">•</span>
               <span className="hidden sm:inline-block">
                 {dict.common.brandTagline}
               </span>
             </div>
           </div>
 
-          {/* 3D Light Engine Column */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="w-full max-w-[500px] aspect-square relative">
-
-              <HeroSceneLoader />
-              {/* Interactive caption notice */}
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[11px] font-mono text-[#A5B0C0]/60 whitespace-nowrap pointer-events-none hidden sm:block">
-                {dict.hero.interactiveNotice}
-              </div>
-            </div>
+          {/* Standalone Flowing 3D Vector Logo */}
+          <div className="lg:col-span-5 relative flex items-center justify-center py-6 lg:py-0">
+            <R21FHeroLogo />
           </div>
         </div>
       </div>

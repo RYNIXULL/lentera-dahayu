@@ -2,9 +2,9 @@ import { Dictionary } from "@/types/i18n";
 
 export const messagesEn: Dictionary = {
   common: {
-    brandName: "LENTERA DAHAYU",
-    brandTagline: "The light, made useful",
-    brandDomain: "Software Engineering & Digital Solutions",
+    brandName: "R21F_webdev",
+    brandTagline: "Software developer studio",
+    brandDomain: "software developer studio",
     exploreProducts: "Explore Products",
     discussProject: "Discuss a Project",
     viewAllProducts: "View All Products",
@@ -42,9 +42,9 @@ export const messagesEn: Dictionary = {
   hero: {
     badge: "Website & App Development Services",
     headline: "Websites and apps to bring your digital needs to life.",
-    subheadline: "LENTERA DAHAYU — software engineering & digital solutions.",
+    subheadline: "R21F_webdev — software developer studio.",
     description:
-      "LENTERA DAHAYU offers website development as well as Android, iOS, Windows, and macOS app development. Tell us what you need and let's discuss the right solution.",
+      "R21F_webdev offers website development as well as Android, iOS, Windows, and macOS app development. Tell us what you need and let's discuss the right solution.",
     ctaCatalog: "View Services",
     ctaContact: "Discuss a Project",
     interactiveNotice: "Interactive 3D experience — move cursor or touch to interact",
@@ -81,7 +81,7 @@ export const messagesEn: Dictionary = {
       eyebrow: "Start a Conversation",
       title: "Tell Us About Your Project",
       description:
-        "Get in touch with LENTERA DAHAYU to discuss the website or app you need.",
+        "Get in touch with R21F_webdev to discuss the website or app you need.",
       primaryTitle: "Main Contact",
       socialTitle: "Social Media",
       comingSoon: "Coming soon",
@@ -151,12 +151,12 @@ export const messagesEn: Dictionary = {
   },
   about: {
     eyebrow: "Profile & Philosophy",
-    title: "About LENTERA DAHAYU",
+    title: "About R21F_webdev",
     description:
-      "An independent software engineering studio dedicated to precision, clarity, and dependable digital systems.",
+      "A software developer studio dedicated to precision, clarity, and dependable digital systems.",
     positioningTitle: "Positioning & Character",
     positioningText:
-      "LENTERA DAHAYU was formed with a steadfast belief in clear thinking and sound execution. We view software not as a transient novelty, but as foundational infrastructure that must remain robust, maintainable, and deeply functional.",
+      "R21F_webdev was formed with a steadfast belief in clear thinking and sound execution. We view software not as a transient novelty, but as foundational infrastructure that must remain robust, maintainable, and deeply functional.",
     principlesTitle: "Our Engineering Principles",
     principles: [
       {
@@ -175,6 +175,12 @@ export const messagesEn: Dictionary = {
           "Prioritizing modularity, thorough documentation, and minimal dependencies to ensure codebases thrive over long-term evolution.",
       },
     ],
+    teamEyebrow: "Engineering Collective",
+    teamTitle: "The Team Behind R21F_webdev",
+    teamDescription:
+      "Three software engineers and system architects dedicated to technical precision across every line of code.",
+    viewPortfolio: "View Portfolio",
+    portfolioComingSoon: "Portfolio In Progress",
   },
   contact: {
     eyebrow: "Initiate Collaboration",
@@ -205,7 +211,7 @@ export const messagesEn: Dictionary = {
     title: "Privacy Policy",
     lastUpdated: "Last updated: October 2026",
     intro:
-      "LENTERA DAHAYU respects the privacy and integrity of every visitor and organization engaging with this website.",
+      "R21F_webdev respects the privacy and integrity of every visitor and organization engaging with this website.",
     dataCollectedTitle: "Information We Collect",
     dataCollectedText:
       "We solely collect information you explicitly submit through our technical inquiry forms, such as your name, corporate email address, and project summary.",

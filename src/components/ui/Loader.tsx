@@ -43,33 +43,33 @@ export function Loader() {
       aria-valuenow={percent}
       aria-valuemin={0}
       aria-valuemax={100}
-      className="fixed inset-0 z-50 bg-[#090D14] flex flex-col items-center justify-center p-6 text-[#F3F6FA] select-none"
+      className="fixed inset-0 z-50 bg-[#F0F5FA] flex flex-col items-center justify-center p-6 text-[#1E293B] select-none"
     >
       <div className="w-full max-w-sm space-y-6 text-center">
         {/* Animated Icon Core */}
-        <div className="w-16 h-16 rounded-2xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(139,229,255,0.15)]">
+        <div className="w-16 h-16 rounded-2xl bg-white border-2 border-[#BAE6FD] text-[#0284C7] flex items-center justify-center mx-auto shadow-[0_12px_24px_rgba(14,165,233,0.15),inset_2px_2px_4px_rgba(255,255,255,1)]">
           <Cpu className="w-8 h-8 animate-pulse" />
         </div>
 
         {/* Counter */}
         <div>
-          <div className="text-6xl sm:text-7xl font-mono font-bold tracking-tight text-[#8BE5FF]">
+          <div className="text-6xl sm:text-7xl font-mono font-bold tracking-tight text-[#0284C7]">
             {percent}%
           </div>
-          <p className="mt-2 text-xs font-mono tracking-widest uppercase text-[#A5B0C0]">
+          <p className="mt-2 text-xs font-mono tracking-widest uppercase text-[#64748B]">
             {statusText}
           </p>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full h-1.5 rounded-full bg-[#172232] overflow-hidden border border-[#2A3545]">
+        <div className="w-full h-2 rounded-full bg-white overflow-hidden border border-[#E2E8F0] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06)]">
           <div
-            className="h-full bg-gradient-to-r from-[#8BE5FF] to-[#43BFEA] transition-all duration-75"
+            className="h-full bg-gradient-to-r from-[#38BDF8] to-[#0284C7] transition-all duration-75 rounded-full"
             style={{ width: `${percent}%` }}
           />
         </div>
 
-        <p className="text-[11px] font-mono text-[#A5B0C0]/50 uppercase tracking-widest">
+        <p className="text-[11px] font-mono text-[#64748B]/60 uppercase tracking-widest">
           VESSEL-01 // ARCHITECTURAL REVEAL
         </p>
       </div>

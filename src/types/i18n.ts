@@ -124,6 +124,11 @@ export interface Dictionary {
       title: string;
       description: string;
     }>;
+    teamEyebrow?: string;
+    teamTitle?: string;
+    teamDescription?: string;
+    viewPortfolio?: string;
+    portfolioComingSoon?: string;
   };
   contact: {
     eyebrow: string;

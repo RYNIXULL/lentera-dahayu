@@ -1,7 +1,7 @@
 import { Product } from "@/types/product";
 
 /**
- * LENTERA DAHAYU Product Registry
+ * R21F_webdev Product Registry
  *
  * PANDUAN PENGISIAN DATA:
  * 1. Setiap produk harus memiliki data terverifikasi sebelum `published` disetel ke `true`.

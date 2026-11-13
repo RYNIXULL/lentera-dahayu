@@ -38,7 +38,7 @@ export function StoryApp() {
   useSmoothScroll();
 
   return (
-    <div className="relative bg-[#090D14] text-[#F3F6FA] min-h-screen overflow-x-hidden cursor-default">
+    <div className="relative bg-[#F0F5FA] text-[#1E293B] min-h-screen overflow-x-hidden cursor-default">
       {/* 1. Loader with Percentage & Scale Reveal */}
       <Loader />
 

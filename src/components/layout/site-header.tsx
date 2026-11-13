@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Locale, Dictionary } from "@/types/i18n";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
@@ -36,22 +37,30 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-200">
+      <header className="fixed top-0 left-0 right-0 z-40 clay-nav transition-all duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
           {/* Brand Wordmark */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#C1F1FF] rounded-lg p-1"
+            className="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-[#0284C7] rounded-2xl p-1"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#172232] border border-[#2A3545] group-hover:border-[#8BE5FF]/50 flex items-center justify-center transition-colors">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#8BE5FF] shadow-[0_0_10px_#8BE5FF] transition-transform group-hover:scale-125" />
+            <div className="w-10 h-10 rounded-2xl bg-white border-2 border-white group-hover:border-[#38BDF8]/60 flex items-center justify-center p-1.5 transition-all shadow-[0_8px_18px_-2px_rgba(14,165,233,0.16),-3px_-3px_8px_rgba(255,255,255,1),inset_2px_2px_4px_#FFFFFF,inset_-2px_-2px_4px_rgba(14,165,233,0.06)]">
+              <Image
+                src="/logo.svg"
+                alt="R21F"
+                width={32}
+                height={26}
+                style={{ width: "auto", height: "auto" }}
+                className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold tracking-wider text-sm sm:text-base text-[#F3F6FA] uppercase">
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-[#1E293B] uppercase">
                 {dict.common.brandName}
               </span>
-              <span className="text-[10px] tracking-widest text-[#A5B0C0] uppercase font-mono hidden sm:inline-block">
-                Software Engineering
+              <span className="text-[10px] tracking-widest text-[#64748B] uppercase font-mono font-bold hidden sm:inline-block">
+                Software Developer Studio
               </span>
             </div>
           </Link>
@@ -59,7 +68,7 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
           {/* Desktop Navigation */}
           <nav
             aria-label="Navigasi Utama"
-            className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#111824]/50 border border-white/5 backdrop-blur-sm"
+            className="hidden md:flex items-center gap-1.5 lg:gap-2 px-3.5 py-2 rounded-full bg-white/90 border-2 border-white shadow-[0_12px_24px_-4px_rgba(14,165,233,0.1),-4px_-4px_14px_rgba(255,255,255,1),inset_2px_2px_4px_#FFFFFF,inset_-2px_-2px_4px_rgba(14,165,233,0.04)] backdrop-blur-md"
           >
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -67,10 +76,10 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  className={`px-4 py-2 rounded-full text-xs transition-all ${
                     active
-                      ? "bg-[#8BE5FF]/15 text-[#8BE5FF] font-semibold border border-[#8BE5FF]/30"
-                      : "text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-white/5 border border-transparent"
+                      ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-white font-bold shadow-[0_8px_16px_rgba(14,165,233,0.36),inset_2px_2px_4px_rgba(255,255,255,0.6),inset_-2px_-2px_4px_rgba(3,105,161,0.35)] border border-white/50"
+                      : "text-[#64748B] hover:text-[#0284C7] hover:bg-[#F0F9FF] font-bold"
                   }`}
                 >
                   {link.label}
@@ -88,7 +97,7 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
                 variant="primary"
                 size="sm"
                 href={`/${locale}/contact`}
-                className="font-medium"
+                className="font-semibold"
               >
                 <span>{dict.common.discussProject}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -101,7 +110,7 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Tutup menu" : "Buka menu navigasi"}
               aria-expanded={mobileMenuOpen}
-              className="md:hidden p-2 rounded-lg text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-[#172232] border border-[#2A3545] focus:outline-none focus:ring-2 focus:ring-[#8BE5FF]"
+              className="md:hidden p-2 rounded-xl text-[#64748B] hover:text-[#0284C7] hover:bg-white bg-white/80 border border-[#E2E8F0] shadow-[0_4px_8px_-2px_rgba(14,165,233,0.06),inset_1px_1px_2px_rgba(255,255,255,1)] focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

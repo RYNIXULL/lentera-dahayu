@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Locale } from "@/types/i18n";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://lenteradahayu.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://r21fwebdev.com";
 
 interface MetadataOptions {
   title: string;
@@ -23,12 +23,16 @@ export function constructMetadata({
   const alternateId = `${SITE_URL}/id${currentPath === "/" ? "" : currentPath}`;
   const alternateEn = `${SITE_URL}/en${currentPath === "/" ? "" : currentPath}`;
 
-  const fullTitle = `${title} | LENTERA DAHAYU`;
+  const fullTitle = `${title} | R21F_webdev`;
 
   return {
     title: fullTitle,
     description,
     metadataBase: new URL(SITE_URL),
+    icons: {
+      icon: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -40,7 +44,7 @@ export function constructMetadata({
       title: fullTitle,
       description,
       url: canonicalUrl,
-      siteName: "LENTERA DAHAYU",
+      siteName: "R21F_webdev",
       locale: locale === "id" ? "id_ID" : "en_US",
       type: ogType,
     },

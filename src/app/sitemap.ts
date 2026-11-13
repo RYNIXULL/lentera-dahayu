@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { LOCALES } from "@/lib/i18n";
 import { getPublishedProducts } from "@/lib/products";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://lenteradahayu.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://r21fwebdev.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

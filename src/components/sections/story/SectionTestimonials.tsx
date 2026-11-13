@@ -51,72 +51,70 @@ export function SectionTestimonials() {
       <div className="max-w-5xl z-10 w-full space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-[#8BE5FF] glass-badge mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold text-[#0284C7] clay-badge mb-4">
               <UserCheck className="w-3.5 h-3.5" />
               <span>PEER REVIEW // 10. CRITICAL ACCLAIM</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F3F6FA] leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#1E293B] leading-[1.05]">
               Praised by academics.{" "}
-              <span className="text-[#8BE5FF]">Feared by paper cups.</span>
+              <span className="text-[#0284C7]">Feared by diner mugs.</span>
             </h2>
           </div>
 
-          {/* Carousel Arrows */}
+          {/* Slider Controls */}
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={() => handleScroll("left")}
-              aria-label="Gulir ulasan ke kiri"
-              data-cursor="pointer"
-              className="p-3 rounded-xl bg-[#111824] hover:bg-[#172232] border border-[#2A3545] text-[#A5B0C0] hover:text-[#F3F6FA] transition-colors"
+              aria-label="Gulir ke kiri"
+              className="p-3 rounded-2xl bg-white border border-[#E2E8F0] text-[#64748B] hover:text-[#0284C7] hover:border-sky-200 shadow-sm transition-all active:scale-95 cursor-pointer"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               type="button"
               onClick={() => handleScroll("right")}
-              aria-label="Gulir ulasan ke kanan"
-              data-cursor="pointer"
-              className="p-3 rounded-xl bg-[#111824] hover:bg-[#172232] border border-[#2A3545] text-[#A5B0C0] hover:text-[#F3F6FA] transition-colors"
+              aria-label="Gulir ke kanan"
+              className="p-3 rounded-2xl bg-white border border-[#E2E8F0] text-[#64748B] hover:text-[#0284C7] hover:border-sky-200 shadow-sm transition-all active:scale-95 cursor-pointer"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Horizontal Carousel */}
+        {/* Carousel Tracks */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-6 scrollbar-none snap-x snap-mandatory"
+          className="flex gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory"
         >
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="min-w-[300px] sm:min-w-[380px] max-w-[400px] glass-card rounded-2xl p-7 border border-[#2A3545] flex flex-col justify-between shrink-0 snap-start space-y-6"
+              className="min-w-[300px] sm:min-w-[360px] max-w-[380px] clay-card rounded-3xl p-7 border border-[#E2E8F0] flex flex-col justify-between space-y-6 snap-start shrink-0"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between font-mono text-xs">
-                  <span className="text-[#8BE5FF] font-bold">{t.rating}</span>
-                  <div className="flex items-center text-[#FF9100]">
-                    {Array.from({ length: 5 }).map((_, sIdx) => (
-                      <Star key={sIdx} className="w-3.5 h-3.5 fill-current" />
-                    ))}
-                  </div>
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="flex items-center gap-1 text-[#0284C7]">
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                  </span>
+                  <span className="text-[#64748B] font-bold">{t.rating}</span>
                 </div>
 
-                <Quote className="w-6 h-6 text-[#8BE5FF]/40" />
+                <Quote className="w-8 h-8 text-[#0284C7]/40" />
 
-                <p className="text-sm sm:text-base text-[#F3F6FA] leading-relaxed italic">
+                <p className="text-sm text-[#64748B] leading-relaxed italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#2A3545]">
-                <p className="text-sm font-bold text-[#F3F6FA]">{t.author}</p>
-                <p className="text-xs font-mono text-[#A5B0C0] mt-0.5">
-                  {t.title}
-                </p>
+              <div className="pt-4 border-t border-[#E2E8F0]">
+                <p className="text-sm font-bold text-[#1E293B]">{t.author}</p>
+                <p className="text-xs text-[#64748B] font-mono mt-0.5">{t.title}</p>
               </div>
             </div>
           ))}

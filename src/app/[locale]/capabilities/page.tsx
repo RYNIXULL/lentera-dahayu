@@ -94,23 +94,23 @@ export default async function CapabilitiesPage({
           return (
             <div
               key={cap.title}
-              className="glass-card rounded-2xl p-6 sm:p-10 border border-[#2A3545] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+              className="clay-card rounded-[32px] p-6 sm:p-10 border-[2.5px] border-white grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
             >
               <div className="lg:col-span-6 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center">
-                    <IconComponent className="w-5 h-5" />
+                  <div className="clay-icon-box w-14 h-14 rounded-2xl flex items-center justify-center">
+                    <IconComponent className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-mono text-[#8BE5FF]">
+                  <span className="text-xs font-mono font-bold text-[#0284C7]">
                     0{idx + 1} / DOMAIN
                   </span>
                 </div>
 
-                <h2 className="text-2xl font-bold tracking-tight text-[#F3F6FA]">
+                <h2 className="text-2xl font-bold tracking-tight text-[#1E293B]">
                   {cap.title}
                 </h2>
 
-                <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">
                   {cap.description}
                 </p>
 
@@ -118,7 +118,7 @@ export default async function CapabilitiesPage({
                   {cap.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-mono px-3 py-1 rounded-md bg-[#172232] text-[#A5B0C0] border border-[#2A3545]"
+                      className="text-xs font-mono font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-br from-white to-[#F0F9FF] text-[#64748B] border-2 border-white shadow-[0_2px_6px_rgba(14,165,233,0.08),inset_1px_1px_2px_#FFFFFF]"
                     >
                       {tag}
                     </span>
@@ -126,17 +126,17 @@ export default async function CapabilitiesPage({
                 </div>
               </div>
 
-              <div className="lg:col-span-6 bg-[#090D14]/60 rounded-xl p-6 border border-[#2A3545]/60 space-y-3">
-                <h3 className="text-xs font-mono uppercase tracking-wider text-[#F3F6FA] mb-4">
+              <div className="lg:col-span-6 clay-inset rounded-[24px] p-6 sm:p-7 space-y-3">
+                <h3 className="text-xs font-mono uppercase tracking-wider text-[#1E293B] font-bold mb-4">
                   Standar Eksekusi & Ruang Lingkup
                 </h3>
                 <ul className="space-y-2.5">
                   {cap.points.map((pt, pIdx) => (
                     <li
                       key={pIdx}
-                      className="flex items-start gap-2.5 text-xs sm:text-sm text-[#A5B0C0]"
+                      className="flex items-start gap-2.5 text-xs sm:text-sm text-[#64748B]"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-[#8BE5FF] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </li>
                   ))}
@@ -148,11 +148,11 @@ export default async function CapabilitiesPage({
       </div>
 
       {/* Bottom CTA Box */}
-      <div className="glass-card rounded-2xl p-8 sm:p-12 text-center max-w-3xl mx-auto border border-[#8BE5FF]/20">
-        <h3 className="text-2xl font-bold text-[#F3F6FA] mb-3">
+      <div className="clay-card rounded-[36px] p-8 sm:p-12 text-center max-w-3xl mx-auto border-[3px] border-white bg-gradient-to-br from-white to-[#F0F9FF] shadow-[0_20px_45px_-8px_rgba(14,165,233,0.18)]">
+        <h3 className="text-2xl font-bold text-[#1E293B] mb-3">
           {dict.common.discussProject}
         </h3>
-        <p className="text-sm text-[#A5B0C0] leading-relaxed max-w-xl mx-auto mb-8">
+        <p className="text-sm text-[#64748B] leading-relaxed max-w-xl mx-auto mb-8">
           {dict.capabilities.disclaimer}
         </p>
         <Button variant="primary" size="lg" href={`/${locale}/contact`}>

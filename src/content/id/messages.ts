@@ -2,9 +2,9 @@ import { Dictionary } from "@/types/i18n";
 
 export const messagesId: Dictionary = {
   common: {
-    brandName: "LENTERA DAHAYU",
-    brandTagline: "The light, made useful",
-    brandDomain: "Software Engineering & Digital Solutions",
+    brandName: "R21F_webdev",
+    brandTagline: "Software developer studio",
+    brandDomain: "software developer studio",
     exploreProducts: "Jelajahi Produk",
     discussProject: "Diskusikan Proyek",
     viewAllProducts: "Lihat Semua Produk",
@@ -42,9 +42,9 @@ export const messagesId: Dictionary = {
   hero: {
     badge: "Jasa Pengembangan Website & Aplikasi",
     headline: "Website dan aplikasi untuk mewujudkan kebutuhan digital Anda.",
-    subheadline: "LENTERA DAHAYU — software engineering & digital solutions.",
+    subheadline: "R21F_webdev — software developer studio.",
     description:
-      "LENTERA DAHAYU menyediakan jasa pembuatan website serta aplikasi Android, iOS, Windows, dan macOS. Ceritakan kebutuhan Anda untuk mendiskusikan solusi yang sesuai.",
+      "R21F_webdev menyediakan jasa pembuatan website serta aplikasi Android, iOS, Windows, dan macOS. Ceritakan kebutuhan Anda untuk mendiskusikan solusi yang sesuai.",
     ctaCatalog: "Lihat Layanan",
     ctaContact: "Diskusikan Proyek",
     interactiveNotice: "Pengalaman 3D interaktif — arahkan kursor atau sentuh untuk berinteraksi",
@@ -81,7 +81,7 @@ export const messagesId: Dictionary = {
       eyebrow: "Mulai Diskusi",
       title: "Ceritakan Kebutuhan Proyek Anda",
       description:
-        "Hubungi LENTERA DAHAYU untuk mendiskusikan website atau aplikasi yang Anda butuhkan.",
+        "Hubungi R21F_webdev untuk mendiskusikan website atau aplikasi yang Anda butuhkan.",
       primaryTitle: "Kontak Utama",
       socialTitle: "Media Sosial",
       comingSoon: "Segera tersedia",
@@ -151,12 +151,12 @@ export const messagesId: Dictionary = {
   },
   about: {
     eyebrow: "Profil & Nilai Kerja",
-    title: "Tentang LENTERA DAHAYU",
+    title: "Tentang R21F_webdev",
     description:
-      "Studio independen yang memfokuskan diri pada rekayasa perangkat lunak dan solusi digital berbasis prinsip engineering yang cermat.",
+      "Software developer studio yang memfokuskan diri pada rekayasa perangkat lunak dan solusi digital berbasis prinsip engineering yang cermat.",
     positioningTitle: "Fokus & Karakter",
     positioningText:
-      "LENTERA DAHAYU lahir dari komitmen terhadap ketepatan berpikir dan kejelasan implementasi. Kami memandang kode bukan sekadar baris instruksi, melainkan struktur penopang operasional yang harus bertahan lama, mudah dipelihara, dan memberikan nilai nyata bagi penggunanya.",
+      "R21F_webdev lahir dari komitmen terhadap ketepatan berpikir dan kejelasan implementasi. Kami memandang kode bukan sekadar baris instruksi, melainkan struktur penopang operasional yang harus bertahan lama, mudah dipelihara, dan memberikan nilai nyata bagi penggunanya.",
     principlesTitle: "Prinsip Engineering Kami",
     principles: [
       {
@@ -175,6 +175,12 @@ export const messagesId: Dictionary = {
           "Memprioritaskan kode yang modular, terdokumentasi rapi, dan terbebas dari ketergantungan yang tidak esensial agar mudah dikembangkan di masa depan.",
       },
     ],
+    teamEyebrow: "Kolektif Rekayasa",
+    teamTitle: "Tim di Balik R21F_webdev",
+    teamDescription:
+      "Tiga pengembang dan perancang sistem yang mendedikasikan presisi teknis untuk mewujudkan produk digital Anda.",
+    viewPortfolio: "Buka Portofolio",
+    portfolioComingSoon: "Portofolio Segera Hadir",
   },
   contact: {
     eyebrow: "Mulai Kolaborasi",
@@ -205,7 +211,7 @@ export const messagesId: Dictionary = {
     title: "Kebijakan Privasi",
     lastUpdated: "Terakhir diperbarui: Oktober 2026",
     intro:
-      "LENTERA DAHAYU berkomitmen menjaga integritas dan kerahasiaan informasi pengguna yang berinteraksi dengan situs web ini.",
+      "R21F_webdev berkomitmen menjaga integritas dan kerahasiaan informasi pengguna yang berinteraksi dengan situs web ini.",
     dataCollectedTitle: "Data yang Kami Kumpulkan",
     dataCollectedText:
       "Kami hanya mengumpulkan informasi yang Anda berikan secara sukarela melalui formulir konsultasi, seperti nama, alamat email, dan ringkasan proyek.",

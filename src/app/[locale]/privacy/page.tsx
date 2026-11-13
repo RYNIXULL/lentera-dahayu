@@ -45,39 +45,39 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
         description={dict.privacy.lastUpdated}
       />
 
-      <div className="glass-card rounded-2xl p-8 sm:p-10 border border-[#2A3545] space-y-8">
+      <div className="clay-card rounded-[36px] p-8 sm:p-12 border-[2.5px] border-white space-y-8">
         <div>
-          <p className="text-base text-[#A5B0C0] leading-relaxed">
+          <p className="text-base text-[#64748B] leading-relaxed">
             {dict.privacy.intro}
           </p>
         </div>
 
-        <section className="space-y-3 pt-4 border-t border-[#2A3545]">
-          <div className="flex items-center gap-2 text-base font-bold text-[#F3F6FA]">
-            <EyeOff className="w-5 h-5 text-[#8BE5FF]" />
+        <section className="space-y-3 pt-4 border-t border-[#E2E8F0]">
+          <div className="flex items-center gap-2 text-base font-bold text-[#1E293B]">
+            <EyeOff className="w-5 h-5 text-[#0284C7]" />
             <h2>{dict.privacy.dataCollectedTitle}</h2>
           </div>
-          <p className="text-sm text-[#A5B0C0] leading-relaxed">
+          <p className="text-sm text-[#64748B] leading-relaxed">
             {dict.privacy.dataCollectedText}
           </p>
         </section>
 
-        <section className="space-y-3 pt-4 border-t border-[#2A3545]">
-          <div className="flex items-center gap-2 text-base font-bold text-[#F3F6FA]">
-            <Lock className="w-5 h-5 text-[#8BE5FF]" />
+        <section className="space-y-3 pt-4 border-t border-[#E2E8F0]">
+          <div className="flex items-center gap-2 text-base font-bold text-[#1E293B]">
+            <Lock className="w-5 h-5 text-[#0284C7]" />
             <h2>{dict.privacy.usageTitle}</h2>
           </div>
-          <p className="text-sm text-[#A5B0C0] leading-relaxed">
+          <p className="text-sm text-[#64748B] leading-relaxed">
             {dict.privacy.usageText}
           </p>
         </section>
 
-        <section className="space-y-3 pt-4 border-t border-[#2A3545]">
-          <div className="flex items-center gap-2 text-base font-bold text-[#F3F6FA]">
-            <ShieldCheck className="w-5 h-5 text-[#86D6AD]" />
+        <section className="space-y-3 pt-4 border-t border-[#E2E8F0]">
+          <div className="flex items-center gap-2 text-base font-bold text-[#1E293B]">
+            <ShieldCheck className="w-5 h-5 text-[#059669]" />
             <h2>{dict.privacy.securityTitle}</h2>
           </div>
-          <p className="text-sm text-[#A5B0C0] leading-relaxed">
+          <p className="text-sm text-[#64748B] leading-relaxed">
             {dict.privacy.securityText}
           </p>
         </section>

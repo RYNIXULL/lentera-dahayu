@@ -34,14 +34,14 @@ export function VideoModal() {
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
     >
       <div
-        className="fixed inset-0 bg-[#090D14]/85 backdrop-blur-xl transition-opacity"
+        className="fixed inset-0 bg-[#1E293B]/40 backdrop-blur-md transition-opacity"
         onClick={() => setIsOpen(false)}
       />
 
-      <div className="relative w-full max-w-3xl glass-modal rounded-3xl p-6 sm:p-8 border border-white/10 z-10 text-[#F3F6FA] shadow-2xl animate-slide-up">
+      <div className="relative w-full max-w-3xl clay-modal rounded-[36px] p-6 sm:p-8 border-[3px] border-white z-10 text-[#1E293B] shadow-2xl animate-slide-up">
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-[#2A3545]">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#8BE5FF]">
+        <div className="flex items-center justify-between pb-4 border-b border-[#E2E8F0]">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0284C7]">
             <Play className="w-4 h-4 fill-current" />
             <span>SPECIFICATION REVEAL FILM // ARCHIVAL CUT</span>
           </div>
@@ -49,15 +49,15 @@ export function VideoModal() {
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="Tutup pemutar video"
-            className="p-1.5 rounded-lg text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-[#172232] transition-colors"
+            className="p-2 rounded-2xl text-[#64748B] hover:text-[#0284C7] hover:bg-[#F0F9FF] transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Video Canvas Simulation */}
-        <div className="mt-6 aspect-video rounded-2xl bg-gradient-to-br from-[#111824] via-[#172232] to-[#090D14] border border-[#2A3545] relative overflow-hidden flex flex-col justify-between p-6">
-          <div className="flex items-center justify-between text-xs font-mono text-[#8BE5FF]/80">
+        <div className="mt-6 aspect-video rounded-[28px] clay-inset relative overflow-hidden flex flex-col justify-between p-6 sm:p-8">
+          <div className="flex items-center justify-between text-xs font-mono font-bold text-[#0284C7]">
             <span>TC 00:01:24:18</span>
             <span className="flex items-center gap-1.5">
               <Volume2 className="w-3.5 h-3.5" />
@@ -66,20 +66,20 @@ export function VideoModal() {
           </div>
 
           <div className="text-center space-y-3 max-w-lg mx-auto">
-            <div className="w-14 h-14 rounded-full bg-[#8BE5FF]/10 border border-[#8BE5FF]/40 text-[#8BE5FF] flex items-center justify-center mx-auto shadow-[0_0_20px_rgba(139,229,255,0.2)]">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#38BDF8] to-[#0284C7] text-white flex items-center justify-center mx-auto shadow-[0_10px_20px_rgba(14,165,233,0.35),inset_2px_2px_4px_rgba(255,255,255,0.4)]">
               <Play className="w-6 h-6 fill-current ml-0.5" />
             </div>
-            <p className="text-lg font-bold text-[#F3F6FA]">
+            <p className="text-lg font-bold text-[#1E293B]">
               &ldquo;We spent 4 years training an inference model to hold hot liquid without existential dread.&rdquo;
             </p>
-            <p className="text-xs font-mono text-[#A5B0C0]">
+            <p className="text-xs font-mono text-[#64748B]">
               FEATURING: Dr. H. Vance (Chief Ceramic Prompt Engineer)
             </p>
           </div>
 
-          <div className="flex items-center justify-between text-[11px] font-mono text-[#A5B0C0]/60">
+          <div className="flex items-center justify-between text-[11px] font-mono text-[#64748B]">
             <span className="flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5 text-[#86D6AD]" />
+              <Shield className="w-3.5 h-3.5 text-[#059669]" />
               <span>100% UNEDITED SPEC FOOTAGE</span>
             </span>
             <span>VESSEL-01 LABORATORY ARCHIVES</span>

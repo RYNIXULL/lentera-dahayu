@@ -31,7 +31,6 @@ export function Modal({
 
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
@@ -58,7 +57,7 @@ export function Modal({
     >
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#090D14]/80 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-[#1E293B]/30 backdrop-blur-sm transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -66,15 +65,15 @@ export function Modal({
       {/* Modal Dialog Card */}
       <div
         ref={modalRef}
-        className={`relative w-full ${maxWidthClass} glass-modal rounded-2xl p-6 sm:p-8 border border-white/10 z-10 text-[#F3F6FA] shadow-2xl animate-slide-up`}
+        className={`relative w-full ${maxWidthClass} clay-modal rounded-[32px] p-6 sm:p-8 z-10 text-[#1E293B] animate-slide-up border-[3px] border-white bg-white shadow-[0_25px_50px_-12px_rgba(14,165,233,0.25)]`}
       >
-        <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#2A3545]">
+        <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#E2E8F0]">
           <div>
-            <h3 id="modal-title" className="text-xl font-bold tracking-tight text-[#F3F6FA]">
+            <h3 id="modal-title" className="text-xl font-bold tracking-tight text-[#1E293B]">
               {title}
             </h3>
             {description && (
-              <p className="mt-1 text-sm text-[#A5B0C0] leading-relaxed">
+              <p className="mt-1 text-sm text-[#64748B] leading-relaxed">
                 {description}
               </p>
             )}
@@ -83,7 +82,7 @@ export function Modal({
             type="button"
             onClick={onClose}
             aria-label="Tutup dialog"
-            className="p-1.5 rounded-lg text-[#A5B0C0] hover:text-[#F3F6FA] hover:bg-[#172232] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8BE5FF]"
+            className="p-2 rounded-xl text-[#64748B] hover:text-[#0284C7] hover:bg-[#F0F9FF] transition-colors focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
           >
             <X className="w-5 h-5" />
           </button>

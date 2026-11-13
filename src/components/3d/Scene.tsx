@@ -73,8 +73,8 @@ export function Scene() {
           castShadow
           shadow-mapSize={[1024, 1024]}
         />
-        <pointLight position={[-4, -2, -2]} intensity={0.8} color="#8BE5FF" />
-        <pointLight position={[3, -4, 2]} intensity={0.5} color="#FF9100" />
+        <pointLight position={[-4, -2, -2]} intensity={0.8} color="#0284C7" />
+        <pointLight position={[3, -4, 2]} intensity={0.5} color="#38BDF8" />
 
         {/* Hero 3D Object with soft float */}
         <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.2}>
@@ -84,11 +84,11 @@ export function Scene() {
         {/* Contact Shadow on Studio Ground */}
         <ContactShadows
           position={[0, -2.1, 0]}
-          opacity={0.65}
+          opacity={0.35}
           scale={7}
           blur={2.4}
           far={4.5}
-          color="#000000"
+          color="#0EA5E9"
         />
       </Canvas>
     </div>

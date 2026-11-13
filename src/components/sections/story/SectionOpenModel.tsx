@@ -32,66 +32,66 @@ export function SectionOpenModel() {
       className="min-h-screen relative flex items-center justify-end px-4 sm:px-6 lg:px-12 py-24 select-none"
     >
       <div className="max-w-2xl z-10 space-y-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono text-[#8BE5FF] glass-badge">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold text-[#0284C7] clay-badge">
           <BookOpen className="w-3.5 h-3.5" />
           <span>OPEN WEIGHTS // 13. RESEARCH RELEASE & BIBTEX</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F3F6FA] leading-[1.05]">
+        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#1E293B] leading-[1.05]">
           Open access ceramic research.{" "}
-          <span className="text-[#8BE5FF]">Inspect our math.</span>
+          <span className="text-[#0284C7]">Inspect our math.</span>
         </h2>
 
-        <p className="text-sm sm:text-base text-[#A5B0C0] leading-relaxed">
+        <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">
           We believe in open science. We are making our complete slip-cast CAD topologies, thermal loss shaders, and peer review logs open under the Apache-Porcelain 2.0 license.
         </p>
 
         {/* Download Links Matrix */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div className="p-4 rounded-xl bg-[#111824]/80 border border-[#2A3545] space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#8BE5FF]">
+          <div className="p-5 rounded-3xl bg-white border border-[#E2E8F0] space-y-2 shadow-xs">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0284C7]">
               <FileText className="w-4 h-4" />
               <span>PAPER (PDF)</span>
             </div>
-            <p className="text-xs text-[#A5B0C0]">18-page peer-reviewed specification document.</p>
-            <span className="inline-block text-[11px] font-mono text-[#86D6AD]">v1.0.4 [4.2 MB]</span>
+            <p className="text-xs text-[#64748B]">18-page peer-reviewed specification document.</p>
+            <span className="inline-block text-[11px] font-mono font-semibold text-[#059669]">v1.0.4 [4.2 MB]</span>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#111824]/80 border border-[#2A3545] space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#8BE5FF]">
+          <div className="p-5 rounded-3xl bg-white border border-[#E2E8F0] space-y-2 shadow-xs">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0284C7]">
               <Download className="w-4 h-4" />
               <span>WEIGHTS (.GLB)</span>
             </div>
-            <p className="text-xs text-[#A5B0C0]">Draco-compressed parametric 3D mesh.</p>
-            <span className="inline-block text-[11px] font-mono text-[#86D6AD]">KTX2 Textures [1.8 MB]</span>
+            <p className="text-xs text-[#64748B]">Draco-compressed parametric 3D mesh.</p>
+            <span className="inline-block text-[11px] font-mono font-semibold text-[#059669]">KTX2 Textures [1.8 MB]</span>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#111824]/80 border border-[#2A3545] space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#8BE5FF]">
+          <div className="p-5 rounded-3xl bg-white border border-[#E2E8F0] space-y-2 shadow-xs">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#0284C7]">
               <Code2 className="w-4 h-4" />
               <span>SHADERS (GLSL)</span>
             </div>
-            <p className="text-xs text-[#A5B0C0]">Complete vertex and fragment thermal code.</p>
-            <span className="inline-block text-[11px] font-mono text-[#86D6AD]">GitHub Gist [8 KB]</span>
+            <p className="text-xs text-[#64748B]">Complete vertex and fragment thermal code.</p>
+            <span className="inline-block text-[11px] font-mono font-semibold text-[#059669]">GitHub Gist [8 KB]</span>
           </div>
         </div>
 
         {/* BibTeX Block */}
-        <div className="glass-card rounded-2xl p-5 border border-[#2A3545] space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-[#2A3545]">
-            <span className="text-xs font-mono text-[#A5B0C0]">CITATION / BIBTEX</span>
+        <div className="clay-card rounded-3xl p-6 border border-[#E2E8F0] space-y-3">
+          <div className="flex items-center justify-between pb-2 border-b border-[#E2E8F0]">
+            <span className="text-xs font-mono font-bold text-[#64748B]">CITATION / BIBTEX</span>
             <button
               type="button"
               onClick={handleCopyBibtex}
               data-cursor="pointer"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono text-[#8BE5FF] hover:bg-[#172232] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold text-[#0284C7] hover:bg-[#F0F9FF] transition-colors cursor-pointer"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-[#86D6AD]" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-[#059669]" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? "COPIED" : "COPY BIBTEX"}</span>
             </button>
           </div>
 
-          <pre className="text-[11px] font-mono text-[#A5B0C0] overflow-x-auto p-2 bg-[#090D14]/70 rounded-lg leading-relaxed">
+          <pre className="text-[11px] font-mono text-[#64748B] overflow-x-auto p-3 bg-[#F0F5FA] rounded-2xl leading-relaxed border border-[#E2E8F0]">
             {bibtexCode}
           </pre>
         </div>

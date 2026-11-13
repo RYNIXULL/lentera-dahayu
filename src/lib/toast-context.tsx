@@ -72,30 +72,36 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <div
               key={toast.id}
               role="alert"
-              className={`pointer-events-auto flex items-start gap-3 p-4 rounded-xl border backdrop-blur-md shadow-lg transition-all duration-300 animate-slide-up ${
-                isSuccess
-                  ? "bg-[#111824]/95 border-[#86D6AD]/30 text-[#F3F6FA]"
-                  : isError
-                  ? "bg-[#111824]/95 border-[#FF7777]/30 text-[#F3F6FA]"
-                  : "bg-[#111824]/95 border-[#8BE5FF]/30 text-[#F3F6FA]"
-              }`}
+              className="pointer-events-auto flex items-start gap-3.5 p-4 sm:p-5 rounded-[26px] border-[2.5px] border-white bg-white shadow-[0_20px_45px_-6px_rgba(14,165,233,0.22),inset_3px_3px_8px_#FFFFFF,inset_-2px_-2px_6px_rgba(14,165,233,0.06)] transition-all duration-300 animate-slide-up"
             >
               <div className="shrink-0 mt-0.5">
-                {isSuccess && <CheckCircle2 className="w-5 h-5 text-[#86D6AD]" />}
-                {isError && <AlertCircle className="w-5 h-5 text-[#FF7777]" />}
-                {!isSuccess && !isError && <Info className="w-5 h-5 text-[#8BE5FF]" />}
+                {isSuccess && (
+                  <div className="w-9 h-9 rounded-2xl bg-[#ECFDF5] text-[#059669] flex items-center justify-center border-2 border-white shadow-[0_4px_10px_rgba(16,185,129,0.15),inset_2px_2px_4px_#FFFFFF]">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                )}
+                {isError && (
+                  <div className="w-9 h-9 rounded-2xl bg-[#FEF2F2] text-[#DC2626] flex items-center justify-center border-2 border-white shadow-[0_4px_10px_rgba(220,38,38,0.15),inset_2px_2px_4px_#FFFFFF]">
+                    <AlertCircle className="w-4 h-4" />
+                  </div>
+                )}
+                {!isSuccess && !isError && (
+                  <div className="w-9 h-9 rounded-2xl bg-[#F0F9FF] text-[#0284C7] flex items-center justify-center border-2 border-white shadow-[0_4px_10px_rgba(14,165,233,0.15),inset_2px_2px_4px_#FFFFFF]">
+                    <Info className="w-4 h-4" />
+                  </div>
+                )}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold tracking-tight text-[#F3F6FA]">{toast.title}</p>
+                <p className="text-sm font-bold tracking-tight text-[#1E293B]">{toast.title}</p>
                 {toast.message && (
-                  <p className="text-xs text-[#A5B0C0] mt-1 leading-relaxed">{toast.message}</p>
+                  <p className="text-xs text-[#64748B] mt-1 leading-relaxed">{toast.message}</p>
                 )}
               </div>
               <button
                 type="button"
                 onClick={() => removeToast(toast.id)}
                 aria-label="Tutup notifikasi"
-                className="shrink-0 text-[#A5B0C0] hover:text-[#F3F6FA] rounded-md p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-[#8BE5FF]"
+                className="shrink-0 text-[#64748B] hover:text-[#0284C7] hover:bg-[#F0F9FF] rounded-xl p-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#0284C7]"
               >
                 <X className="w-4 h-4" />
               </button>

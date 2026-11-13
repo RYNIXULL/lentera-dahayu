@@ -20,7 +20,7 @@ export function FeaturedProducts({
   return (
     <section
       aria-labelledby="featured-heading"
-      className="py-20 md:py-28 border-t border-[#2A3545]/60 relative"
+      className="py-20 md:py-28 border-t border-[#E2E8F0] relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -54,14 +54,14 @@ export function FeaturedProducts({
             ))}
           </div>
         ) : (
-          <div className="glass-card rounded-2xl p-8 sm:p-12 text-center max-w-2xl mx-auto">
-            <div className="w-12 h-12 rounded-xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center mx-auto mb-4">
-              <ShieldCheck className="w-6 h-6" />
+          <div className="clay-card rounded-[32px] border-[2.5px] border-white p-8 sm:p-12 text-center max-w-2xl mx-auto">
+            <div className="w-14 h-14 rounded-2xl bg-[#F0F9FF] border-2 border-[#BAE6FD] text-[#0284C7] flex items-center justify-center mx-auto mb-4 shadow-[inset_1px_1px_2px_rgba(255,255,255,1),0_6px_14px_rgba(14,165,233,0.15)]">
+              <ShieldCheck className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-[#F3F6FA] mb-2">
+            <h3 className="text-xl font-bold text-[#1E293B] mb-2">
               {dict.featured.title}
             </h3>
-            <p className="text-sm text-[#A5B0C0] leading-relaxed max-w-lg mx-auto mb-6">
+            <p className="text-sm text-[#64748B] leading-relaxed max-w-lg mx-auto mb-6">
               {dict.featured.emptyNotice}
             </p>
             <div className="flex justify-center">

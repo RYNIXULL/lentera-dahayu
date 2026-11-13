@@ -21,22 +21,22 @@ function ChannelItem({
   comingSoon: string;
   large?: boolean;
 }) {
-  const sizeClass = large ? "p-5 gap-4" : "p-4 gap-3";
-  const iconBox = large ? "w-11 h-11" : "w-10 h-10";
+  const sizeClass = large ? "p-5 sm:p-6 gap-4" : "p-4 sm:p-5 gap-3.5";
+  const iconBox = large ? "w-13 h-13" : "w-12 h-12";
 
   const content = (
     <>
       <span
-        className={`${iconBox} shrink-0 rounded-xl bg-[#172232] border border-[#2A3545] text-[#8BE5FF] flex items-center justify-center`}
+        className={`${iconBox} shrink-0 rounded-2xl bg-white border-2 border-white text-[#0284C7] flex items-center justify-center shadow-[0_6px_14px_-2px_rgba(14,165,233,0.16),inset_2px_2px_4px_#FFFFFF,inset_-2px_-2px_4px_rgba(14,165,233,0.06)]`}
       >
         <ChannelIcon id={channel.id} className="w-5 h-5" />
       </span>
       <span className="min-w-0">
-        <span className="block text-sm font-semibold text-[#F3F6FA]">
+        <span className="block text-sm sm:text-base font-bold text-[#1E293B]">
           {channel.label}
         </span>
         {!channel.href && (
-          <span className="block text-xs font-mono text-[#A5B0C0]">
+          <span className="block text-xs font-mono text-[#64748B]/80">
             {comingSoon}
           </span>
         )}
@@ -50,7 +50,7 @@ function ChannelItem({
       <a
         href={channel.href}
         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className={`glass-card rounded-2xl flex items-center ${sizeClass} focus:outline-none focus:ring-2 focus:ring-[#C1F1FF]`}
+        className={`clay-card rounded-[26px] flex items-center ${sizeClass} focus:outline-none focus:ring-2 focus:ring-[#0284C7] transition-all hover:-translate-y-1`}
       >
         {content}
       </a>
@@ -60,7 +60,7 @@ function ChannelItem({
   return (
     <div
       aria-disabled="true"
-      className={`rounded-2xl flex items-center ${sizeClass} bg-[#111824]/40 border border-[#2A3545] opacity-80`}
+      className={`clay-inset rounded-[26px] flex items-center ${sizeClass} opacity-75`}
     >
       {content}
     </div>
@@ -74,7 +74,7 @@ export function HomeContactSection({ dict }: HomeContactSectionProps) {
     <section
       id="kontak"
       aria-labelledby="home-contact-heading"
-      className="py-20 md:py-28 border-t border-[#2A3545]/60 relative scroll-mt-20"
+      className="py-20 md:py-28 border-t border-[#E2E8F0] relative scroll-mt-20"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -86,7 +86,7 @@ export function HomeContactSection({ dict }: HomeContactSectionProps) {
 
         <div className="max-w-3xl mx-auto space-y-10">
           <div>
-            <h3 className="text-xs font-mono uppercase tracking-widest text-[#F3F6FA] mb-4">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-[#1E293B] font-bold mb-4">
               {contact.primaryTitle}
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -103,7 +103,7 @@ export function HomeContactSection({ dict }: HomeContactSectionProps) {
           </div>
 
           <div>
-            <h3 className="text-xs font-mono uppercase tracking-widest text-[#F3F6FA] mb-4">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-[#1E293B] font-bold mb-4">
               {contact.socialTitle}
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -118,7 +118,7 @@ export function HomeContactSection({ dict }: HomeContactSectionProps) {
             </ul>
           </div>
 
-          <p className="text-xs text-[#A5B0C0] text-center">{contact.note}</p>
+          <p className="text-xs text-[#64748B] text-center">{contact.note}</p>
         </div>
       </div>
     </section>
